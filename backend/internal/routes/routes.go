@@ -1,9 +1,13 @@
 package routes
 
 import (
+	"net/http"
+
+	"github.com/Aks98068/forensics/internal/frontend"
 	"github.com/Aks98068/forensics/internal/handlres"
 	middleware "github.com/Aks98068/forensics/internal/middlewares"
 	"github.com/Aks98068/forensics/internal/models"
+
 	"github.com/gin-gonic/gin"
 )
 
@@ -17,6 +21,7 @@ func Routes(
 	router *gin.Engine,
 	authHandler *handlres.AuthHandler,
 	userHandler *handlres.UserHandler,
+	frontendRenderer *frontend.Renderer,
 	cfg *Config,
 ) {
 
@@ -27,8 +32,9 @@ func Routes(
 	router.GET(
 		"/health",
 		func(c *gin.Context) {
+
 			c.JSON(
-				200,
+				http.StatusOK,
 				gin.H{
 					"status": "ok",
 				},
@@ -93,7 +99,7 @@ func Routes(
 	)
 
 	// ============================================================
-	// PROTECTED ROUTES
+	// PROTECTED API
 	// ============================================================
 
 	protected := api.Group(
@@ -111,7 +117,7 @@ func Routes(
 	)
 
 	// ============================================================
-	// USER ROUTES
+	// USER API
 	// ============================================================
 
 	userRoutes := protected.Group(
@@ -132,7 +138,7 @@ func Routes(
 	)
 
 	// ============================================================
-	// ANALYST ROUTES
+	// ANALYST API
 	// ============================================================
 
 	analystRoutes := protected.Group(
@@ -146,8 +152,10 @@ func Routes(
 		),
 	)
 
+	_ = analystRoutes
+
 	// ============================================================
-	// ADMIN ROUTES
+	// ADMIN API
 	// ============================================================
 
 	adminRoutes := protected.Group(
@@ -160,8 +168,26 @@ func Routes(
 		),
 	)
 
-	// Prevent unused-variable compiler errors until
-	// actual analyst/admin endpoints are added.
-	_ = analystRoutes
 	_ = adminRoutes
+
+	// ============================================================
+	// FRONTEND
+	// ============================================================
+	//
+	// This must be LAST.
+	//
+	// Register() creates:
+	//
+	//   GET /
+	//   /css/*
+	//   /js/*
+	//   /assets/*
+	//   NoRoute() frontend fallback
+	//
+	// We deliberately DO NOT create /*path.
+	// ============================================================
+
+	frontendRenderer.Register(
+		router,
+	)
 }

@@ -1,0 +1,270 @@
+{{ define "content" }}
+
+<!-- ========================= HERO ========================= -->
+<section class="home-hero">
+    <div class="hero-blob hero-blob-1"></div>
+    <div class="hero-blob hero-blob-2"></div>
+
+    <div class="container position-relative">
+        <div class="row align-items-center min-vh-75 gy-5">
+
+            <div class="col-lg-6">
+                <span class="home-badge hero-in hero-in-1">
+                    <span class="badge-dot"></span>
+                    Secure by design
+                </span>
+
+                <h1 class="home-title hero-in hero-in-2">
+                    Connect.
+                    <span class="text-gradient">Communicate.</span>
+                    Chat.
+                </h1>
+
+                <p class="home-description hero-in hero-in-3">
+                    A modern, secure communication platform built with Go,
+                    Gin and MySQL. Verified accounts, protected sessions and
+                    a clean interface, all in one place.
+                </p>
+
+                <div class="home-actions hero-in hero-in-4">
+                    <a href="/register" class="btn btn-primary btn-lg btn-glow">
+                        Create Account
+                    </a>
+                    <a href="/login" class="btn btn-outline-dark btn-lg">
+                        Sign In
+                    </a>
+                </div>
+
+                <ul class="hero-points hero-in hero-in-5">
+                    <li>✔ Email-verified accounts</li>
+                    <li>✔ Protected sessions</li>
+                    <li>✔ Free to join</li>
+                </ul>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="chat-wrap hero-in hero-in-3">
+
+                    <div class="float-chip float-chip-1">🔐 Verified</div>
+                    <div class="float-chip float-chip-2">⚡ Fast</div>
+
+                    <div class="chat-card">
+
+                        <div class="chat-card-header">
+                            <div class="chat-avatar">💬</div>
+                            <div>
+                                <h5 class="mb-0">{{ .AppName }}</h5>
+                                <small><span class="status-dot"></span> Online</small>
+                            </div>
+                        </div>
+
+                        <div class="chat-messages">
+                            <div class="message message-left msg-1">
+                                <span>Hey! Welcome 👋</span>
+                            </div>
+                            <div class="message message-right msg-2">
+                                <span>Nice to meet you!</span>
+                            </div>
+                            <div class="message message-left msg-3">
+                                <span>Ready to start chatting?</span>
+                            </div>
+                            <div class="message message-right msg-4">
+                                <span>Absolutely 🚀</span>
+                            </div>
+                            <div class="message message-left msg-5">
+                                <span class="typing">
+                                    <i></i><i></i><i></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="chat-input">
+                            <span>Type a message...</span>
+                            <button type="button">Send</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ========================= TECH STRIP ========================= -->
+<section class="tech-strip">
+    <div class="container">
+        <p class="tech-label">Built with modern, proven technology</p>
+        <ul class="tech-list">
+            <li>Go</li>
+            <li>Gin</li>
+            <li>MySQL</li>
+            <li>JWT</li>
+            <li>Bootstrap</li>
+        </ul>
+    </div>
+</section>
+
+
+<!-- ========================= FEATURES ========================= -->
+<section class="features-section" id="features">
+    <div class="container">
+
+        <div class="text-center mb-5 reveal">
+            <span class="section-label">FEATURES</span>
+            <h2 class="section-title">Everything you need to get started</h2>
+            <p class="section-description">
+                A solid foundation for secure everyday communication.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-4 reveal">
+                <div class="feature-card">
+                    <div class="feature-icon">🔐</div>
+                    <h4>Secure sign-in</h4>
+                    <p>Passwords are hashed and sessions use short-lived access tokens with refresh support.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 reveal reveal-d1">
+                <div class="feature-card">
+                    <div class="feature-icon">✉️</div>
+                    <h4>Email verification</h4>
+                    <p>Every account is confirmed by email so you always know who you are talking to.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 reveal reveal-d2">
+                <div class="feature-card">
+                    <div class="feature-icon">🔑</div>
+                    <h4>Password recovery</h4>
+                    <p>Forgot your password? A time-limited reset link gets you back in safely.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 reveal">
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h4>Role-based access</h4>
+                    <p>Users, analysts and admins each get exactly the access their role needs.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 reveal reveal-d1">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h4>Fast backend</h4>
+                    <p>Built with Go and Gin for quick, lightweight and responsive requests.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 reveal reveal-d2">
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h4>Works everywhere</h4>
+                    <p>A responsive interface that looks great on phones, tablets and desktops.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ========================= HOW IT WORKS ========================= -->
+<section class="steps-section" id="how-it-works">
+    <div class="container">
+
+        <div class="text-center mb-5 reveal">
+            <span class="section-label">HOW IT WORKS</span>
+            <h2 class="section-title">Up and running in three steps</h2>
+        </div>
+
+        <div class="row g-4 steps-row">
+
+            <div class="col-md-4 reveal">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h4>Create your account</h4>
+                    <p>Sign up with your name, email and a strong password.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 reveal reveal-d1">
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h4>Verify your email</h4>
+                    <p>Click the link we send you to confirm it is really you.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 reveal reveal-d2">
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h4>Sign in and go</h4>
+                    <p>Log in and start using {{ .AppName }} right away.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ========================= SECURITY ========================= -->
+<section class="security-section">
+    <div class="container">
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6 reveal">
+                <span class="section-label">SECURITY FIRST</span>
+                <h2 class="section-title text-start">
+                    Your privacy is not an afterthought
+                </h2>
+                <p class="security-text">
+                    Security is built into every layer, from how passwords
+                    are stored to how every request is validated.
+                </p>
+
+                <ul class="check-list">
+                    <li>Hashed passwords, never stored in plain text</li>
+                    <li>Short-lived tokens with safe refresh</li>
+                    <li>Strict security headers on every response</li>
+                    <li>Request size limits and rate limiting</li>
+                </ul>
+            </div>
+
+            <div class="col-lg-6 reveal reveal-d1">
+                <div class="shield-card">
+                    <div class="shield-icon">🛡️</div>
+                    <div class="shield-lines">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <p class="mb-0">Protected end to end</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ========================= CTA ========================= -->
+<section class="cta-section">
+    <div class="container reveal">
+        <div class="cta-card text-center">
+            <h2>Ready to get started?</h2>
+            <p>Create your account and start using {{ .AppName }} today.</p>
+            <a href="/register" class="btn btn-light btn-lg btn-glow-light">
+                Get Started
+            </a>
+        </div>
+    </div>
+</section>
+
+{{ end }}

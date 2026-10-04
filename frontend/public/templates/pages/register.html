@@ -1,0 +1,738 @@
+{{ define "content" }}
+
+<div class="auth-page">
+    <!-- =====================================================
+         LEFT BRAND PANEL
+    ====================================================== -->
+    <section class="auth-brand">
+        <div class="auth-brand-content">
+
+            <span class="auth-brand-badge">
+                Welcome to ChatApplication
+            </span>
+
+            <h1 class="auth-brand-title">
+                Everything social.
+                <br>
+                In one place.
+            </h1>
+
+            <p class="auth-brand-description">
+                Connect your social accounts, organize content,
+                schedule publications, and monitor your audience
+                from one clean workspace.
+            </p>
+
+            <div class="auth-brand-points">
+
+                <div class="auth-brand-point">
+                    <span class="auth-brand-point-icon">
+                        ✓
+                    </span>
+                    Centralized social account management
+                </div>
+
+                <div class="auth-brand-point">
+                    <span class="auth-brand-point-icon">
+                        ✓
+                    </span>
+                    Content publishing and scheduling
+                </div>
+
+                <div class="auth-brand-point">
+                    <span class="auth-brand-point-icon">
+                        ✓
+                    </span>
+                    Engagement and performance monitoring
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =====================================================
+         REGISTER PANEL
+    ====================================================== -->
+    <section class="auth-panel">
+
+        <div class="auth-form-wrap">
+
+            <!-- Logo -->
+            <a href="/" class="auth-logo" aria-label="ChatApplication home">
+
+                <span class="auth-logo-mark">
+                    C
+                </span>
+
+                <span>
+                    ChatApplication
+                </span>
+
+            </a>
+
+
+            <!-- Heading -->
+            <h2 class="auth-heading">
+                Create your account
+            </h2>
+
+            <p class="auth-subtitle">
+                Create your account and get started.
+            </p>
+
+
+            <!-- Error -->
+            <div
+                id="registerError"
+                class="alert alert-danger d-none"
+                role="alert"
+            ></div>
+
+
+            <!-- Success -->
+            <div
+                id="registerSuccess"
+                class="alert alert-success d-none"
+                role="alert"
+            ></div>
+
+
+            <!-- =================================================
+                 REGISTER FORM
+            ================================================== -->
+            <form id="registerForm" class="auth-form" novalidate>
+
+                <!-- FIRST NAME / LAST NAME -->
+                <div class="row g-3">
+
+                    <!-- First name -->
+                    <div class="col-md-6">
+
+                        <div class="auth-field">
+
+                            <label
+                                for="firstName"
+                                class="auth-label"
+                            >
+                                First name
+                            </label>
+
+                            <div class="auth-input-wrap">
+
+                                <span class="auth-input-icon">
+                                    👤
+                                </span>
+
+                                <input
+                                    id="firstName"
+                                    name="firstName"
+                                    type="text"
+                                    class="form-control auth-input has-icon"
+                                    placeholder="First name"
+                                    autocomplete="given-name"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Last name -->
+                    <div class="col-md-6">
+
+                        <div class="auth-field">
+
+                            <label
+                                for="lastName"
+                                class="auth-label"
+                            >
+                                Last name
+                            </label>
+
+                            <input
+                                id="lastName"
+                                name="lastName"
+                                type="text"
+                                class="form-control auth-input"
+                                placeholder="Last name"
+                                autocomplete="family-name"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- USERNAME -->
+                <div class="auth-field">
+
+                    <label
+                        for="username"
+                        class="auth-label"
+                    >
+                        Username
+                    </label>
+
+                    <div class="auth-input-wrap">
+
+                        <span class="auth-input-icon">
+                            👤
+                        </span>
+
+                        <input
+                            id="username"
+                            name="username"
+                            type="text"
+                            class="form-control auth-input has-icon"
+                            placeholder="Choose a username"
+                            autocomplete="username"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- EMAIL -->
+                <div class="auth-field">
+
+                    <label
+                        for="email"
+                        class="auth-label"
+                    >
+                        Email address
+                    </label>
+
+                    <div class="auth-input-wrap">
+
+                        <span class="auth-input-icon">
+                            ✉
+                        </span>
+
+                        <input
+                            id="email"
+                            name="email"
+                            type="email"
+                            class="form-control auth-input has-icon"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- PASSWORD -->
+                <div class="auth-field">
+
+                    <label
+                        for="password"
+                        class="auth-label"
+                    >
+                        Password
+                    </label>
+
+                    <div class="auth-input-wrap">
+
+                        <span class="auth-input-icon">
+                            🔒
+                        </span>
+
+                        <input
+                            id="password"
+                            name="password"
+                            type="password"
+                            class="form-control auth-input has-icon has-action"
+                            placeholder="Create a password"
+                            autocomplete="new-password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            id="togglePassword"
+                            class="auth-input-action"
+                            aria-label="Show password"
+                        >
+                            👁
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CONFIRM PASSWORD -->
+                <div class="auth-field">
+
+                    <label
+                        for="confirmPassword"
+                        class="auth-label"
+                    >
+                        Confirm password
+                    </label>
+
+                    <div class="auth-input-wrap">
+
+                        <span class="auth-input-icon">
+                            🔒
+                        </span>
+
+                        <input
+                            id="confirmPassword"
+                            name="confirmPassword"
+                            type="password"
+                            class="form-control auth-input has-icon has-action"
+                            placeholder="Confirm your password"
+                            autocomplete="new-password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            id="toggleConfirmPassword"
+                            class="auth-input-action"
+                            aria-label="Show password"
+                        >
+                            👁
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PASSWORD MATCH MESSAGE -->
+                <div
+                    id="passwordMatch"
+                    class="password-match d-none"
+                ></div>
+
+
+                <!-- SUBMIT -->
+                <button
+                    type="submit"
+                    id="registerButton"
+                    class="btn auth-btn auth-btn-primary auth-btn-full"
+                >
+
+                    <span
+                        id="registerButtonSpinner"
+                        class="spinner-border spinner-border-sm d-none"
+                        aria-hidden="true"
+                    ></span>
+
+                    <span id="registerButtonText">
+                        Create account
+                    </span>
+
+                </button>
+
+            </form>
+
+
+            <!-- LOGIN LINK -->
+            <p class="auth-login-text">
+
+                Already have an account?
+
+                <a
+                    href="/login"
+                    class="auth-link"
+                >
+                    Sign in
+                </a>
+
+            </p>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+<!-- =========================================================
+     REGISTER PAGE JAVASCRIPT
+========================================================== -->
+<script>
+(function () {
+
+    const form = document.getElementById("registerForm");
+
+    const firstName = document.getElementById("firstName");
+    const lastName = document.getElementById("lastName");
+    const username = document.getElementById("username");
+    const email = document.getElementById("email");
+    const password = document.getElementById("password");
+    const confirmPassword =
+        document.getElementById("confirmPassword");
+
+    const registerButton =
+        document.getElementById("registerButton");
+
+    const registerButtonText =
+        document.getElementById("registerButtonText");
+
+    const registerButtonSpinner =
+        document.getElementById("registerButtonSpinner");
+
+    const errorBox =
+        document.getElementById("registerError");
+
+    const successBox =
+        document.getElementById("registerSuccess");
+
+    const passwordMatch =
+        document.getElementById("passwordMatch");
+
+
+    /* =====================================================
+       SHOW / HIDE PASSWORD
+    ====================================================== */
+
+    function togglePasswordVisibility(input, button) {
+
+        if (input.type === "password") {
+
+            input.type = "text";
+            button.textContent = "🙈";
+            button.setAttribute(
+                "aria-label",
+                "Hide password"
+            );
+
+        } else {
+
+            input.type = "password";
+            button.textContent = "👁";
+            button.setAttribute(
+                "aria-label",
+                "Show password"
+            );
+        }
+    }
+
+
+    document
+        .getElementById("togglePassword")
+        .addEventListener("click", function () {
+
+            togglePasswordVisibility(
+                password,
+                this
+            );
+
+        });
+
+
+    document
+        .getElementById("toggleConfirmPassword")
+        .addEventListener("click", function () {
+
+            togglePasswordVisibility(
+                confirmPassword,
+                this
+            );
+
+        });
+
+
+    /* =====================================================
+       PASSWORD MATCH
+    ====================================================== */
+
+    function checkPasswordMatch() {
+
+        if (!confirmPassword.value) {
+
+            passwordMatch.classList.add("d-none");
+            return;
+        }
+
+        passwordMatch.classList.remove("d-none");
+
+        if (password.value === confirmPassword.value) {
+
+            passwordMatch.textContent =
+                "✓ Passwords match.";
+
+            passwordMatch.classList.remove(
+                "password-mismatch"
+            );
+
+            passwordMatch.classList.add(
+                "password-match-success"
+            );
+
+        } else {
+
+            passwordMatch.textContent =
+                "Passwords do not match.";
+
+            passwordMatch.classList.remove(
+                "password-match-success"
+            );
+
+            passwordMatch.classList.add(
+                "password-mismatch"
+            );
+        }
+    }
+
+
+    password.addEventListener(
+        "input",
+        checkPasswordMatch
+    );
+
+    confirmPassword.addEventListener(
+        "input",
+        checkPasswordMatch
+    );
+
+
+    /* =====================================================
+       ERROR HANDLING
+    ====================================================== */
+
+    function showError(message) {
+
+        errorBox.textContent = message;
+
+        errorBox.classList.remove("d-none");
+
+        successBox.classList.add("d-none");
+    }
+
+
+    function showSuccess(message) {
+
+        successBox.textContent = message;
+
+        successBox.classList.remove("d-none");
+
+        errorBox.classList.add("d-none");
+    }
+
+
+    function clearMessages() {
+
+        errorBox.textContent = "";
+
+        errorBox.classList.add("d-none");
+
+        successBox.textContent = "";
+
+        successBox.classList.add("d-none");
+    }
+
+
+    /* =====================================================
+       LOADING STATE
+    ====================================================== */
+
+    function setLoading(loading) {
+
+        registerButton.disabled = loading;
+
+        registerButtonSpinner.classList.toggle(
+            "d-none",
+            !loading
+        );
+
+        registerButtonText.textContent =
+            loading
+                ? "Creating account..."
+                : "Create account";
+
+        const inputs =
+            form.querySelectorAll("input, button");
+
+        inputs.forEach(function (element) {
+
+            if (
+                element !== registerButton &&
+                element.type !== "submit"
+            ) {
+                element.disabled = loading;
+            }
+
+        });
+    }
+
+
+    /* =====================================================
+       FORM SUBMISSION
+    ====================================================== */
+
+    form.addEventListener(
+        "submit",
+        async function (event) {
+
+            event.preventDefault();
+
+            clearMessages();
+
+            /* Browser validation */
+            if (!form.checkValidity()) {
+
+                form.classList.add("was-validated");
+
+                showError(
+                    "Please complete all required fields."
+                );
+
+                return;
+            }
+
+
+            /* Password confirmation */
+            if (
+                password.value !==
+                confirmPassword.value
+            ) {
+
+                showError(
+                    "Passwords do not match."
+                );
+
+                return;
+            }
+
+
+            setLoading(true);
+
+
+            try {
+
+                /*
+                 * IMPORTANT:
+                 *
+                 * Do NOT send:
+                 *
+                 * role
+                 * status
+                 * emailVerified
+                 *
+                 * These must remain
+                 * backend-controlled.
+                 */
+
+                const response = await fetch(
+                    "/api/v1/auth/register",
+                    {
+                        method: "POST",
+
+                        headers: {
+                            "Content-Type":
+                                "application/json",
+
+                            "Accept":
+                                "application/json"
+                        },
+
+                        body: JSON.stringify({
+
+                            firstName:
+                                firstName.value.trim(),
+
+                            lastName:
+                                lastName.value.trim(),
+
+                            username:
+                                username.value.trim(),
+
+                            email:
+                                email.value.trim(),
+
+                            password:
+                                password.value
+
+                        })
+                    }
+                );
+
+
+                /* Parse API response */
+                let result = {};
+
+                try {
+
+                    result = await response.json();
+
+                } catch (_) {
+
+                    result = {};
+
+                }
+
+
+                /* API error */
+                if (!response.ok) {
+
+                    throw new Error(
+                        result.message ||
+                        result.error ||
+                        "Unable to create your account."
+                    );
+                }
+
+
+                /* Success */
+                showSuccess(
+                    result.message ||
+                    "Account created successfully."
+                );
+
+
+                /*
+                 * Redirect to email verification.
+                 *
+                 * Email is encoded before being
+                 * placed into the URL.
+                 */
+
+                const encodedEmail =
+                    encodeURIComponent(
+                        email.value.trim()
+                    );
+
+
+                setTimeout(function () {
+
+                    window.location.href =
+                        "/verify-email?email=" +
+                        encodedEmail;
+
+                }, 700);
+
+
+            } catch (error) {
+
+                showError(
+                    error instanceof Error
+                        ? error.message
+                        : "Unable to create your account."
+                );
+
+                setLoading(false);
+            }
+
+        }
+    );
+
+})();
+</script>
+
+{{ end }}

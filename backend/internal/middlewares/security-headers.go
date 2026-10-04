@@ -1,6 +1,20 @@
 package middlewares
 
-import "github.com/gin-gonic/gin"
+import (
+	"strings"
+
+	"github.com/gin-gonic/gin"
+)
+
+const contentSecurityPolicy = "default-src 'none'; " +
+	"style-src 'self' https://cdn.jsdelivr.net; " +
+	"script-src 'self' https://cdn.jsdelivr.net; " +
+	"font-src 'self' https://cdn.jsdelivr.net; " +
+	"img-src 'self' data:; " +
+	"connect-src 'self'; " +
+	"form-action 'self'; " +
+	"base-uri 'self'; " +
+	"frame-ancestors 'none'"
 
 func SecurityHeaders() gin.HandlerFunc {
 	return func(c *gin.Context) {
@@ -27,7 +41,7 @@ func SecurityHeaders() gin.HandlerFunc {
 
 		c.Header(
 			"Content-Security-Policy",
-			"default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
+			contentSecurityPolicy,
 		)
 
 		c.Header(
@@ -45,10 +59,13 @@ func SecurityHeaders() gin.HandlerFunc {
 			"none",
 		)
 
-		c.Header(
-			"Cache-Control",
-			"no-store",
-		)
+		// no-store only for API responses, so CSS/JS can be cached.
+		if strings.HasPrefix(c.Request.URL.Path, "/api/") {
+			c.Header(
+				"Cache-Control",
+				"no-store",
+			)
+		}
 
 		c.Next()
 	}

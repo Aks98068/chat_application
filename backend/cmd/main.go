@@ -6,12 +6,14 @@ import (
 
 	"github.com/Aks98068/forensics/internal/configs"
 	"github.com/Aks98068/forensics/internal/database"
+	"github.com/Aks98068/forensics/internal/frontend"
 	"github.com/Aks98068/forensics/internal/handlres"
 	middleware "github.com/Aks98068/forensics/internal/middlewares"
 	"github.com/Aks98068/forensics/internal/repository"
 	"github.com/Aks98068/forensics/internal/routes"
 	"github.com/Aks98068/forensics/internal/security"
 	"github.com/Aks98068/forensics/internal/service"
+
 	"github.com/gin-gonic/gin"
 )
 
@@ -23,63 +25,40 @@ func main() {
 
 	cfg, err := configs.Load()
 	if err != nil {
-		log.Fatalf(
-			"configuration error: %v",
-			err,
-		)
+		log.Fatalf("configuration error: %v", err)
 	}
 
 	// ============================================================
 	// DATABASE
 	// ============================================================
 
-	db, err := database.Connect(
-		cfg.DatabaseURL,
-	)
+	db, err := database.Connect(cfg.DatabaseURL)
 	if err != nil {
-		log.Fatalf(
-			"database error: %v",
-			err,
-		)
+		log.Fatalf("database error: %v", err)
 	}
 
-	log.Println(
-		"MySQL database connected successfully",
-	)
+	log.Println("MySQL database connected successfully")
 
 	if err := database.MigrateDB(db); err != nil {
-		log.Fatalf(
-			"migration error: %v",
-			err,
-		)
+		log.Fatalf("migration error: %v", err)
 	}
 
-	log.Println(
-		"database migrated successfully",
-	)
+	log.Println("database migrated successfully")
 
 	// ============================================================
 	// REPOSITORIES
 	// ============================================================
 
-	userRepository := repository.NewUserRepository(
-		db,
-	)
+	userRepository := repository.NewUserRepository(db)
 
 	emailVerificationRepository :=
-		repository.NewEmailVerificationRepository(
-			db,
-		)
+		repository.NewEmailVerificationRepository(db)
 
 	refreshTokenRepository :=
-		repository.NewRefreshTokenRepository(
-			db,
-		)
+		repository.NewRefreshTokenRepository(db)
 
 	passwordResetRepository :=
-		repository.NewPasswordResetRepository(
-			db,
-		)
+		repository.NewPasswordResetRepository(db)
 
 	// ============================================================
 	// SECURITY
@@ -89,12 +68,8 @@ func main() {
 
 	tokenService := security.NewTokenService(
 		cfg.JWTAccessSecret,
-		time.Duration(
-			cfg.JWTAccessTTLMinutes,
-		)*time.Minute,
-		time.Duration(
-			cfg.JWTRefreshTTLDays,
-		)*24*time.Hour,
+		time.Duration(cfg.JWTAccessTTLMinutes)*time.Minute,
+		time.Duration(cfg.JWTRefreshTTLDays)*24*time.Hour,
 	)
 
 	// ============================================================
@@ -110,7 +85,7 @@ func main() {
 	)
 
 	// ============================================================
-	// EMAIL VERIFICATION SERVICE
+	// EMAIL VERIFICATION
 	// ============================================================
 
 	emailVerificationService :=
@@ -122,7 +97,7 @@ func main() {
 		)
 
 	// ============================================================
-	// PASSWORD RESET SERVICE
+	// PASSWORD RESET
 	// ============================================================
 
 	passwordResetService :=
@@ -132,9 +107,7 @@ func main() {
 			passwordHasher,
 			emailService,
 			cfg.AppURL,
-			time.Duration(
-				cfg.PasswordResetTTLMinutes,
-			)*time.Minute,
+			time.Duration(cfg.PasswordResetTTLMinutes)*time.Minute,
 		)
 
 	// ============================================================
@@ -181,7 +154,7 @@ func main() {
 	)
 
 	// ============================================================
-	// GIN ROUTER
+	// GIN
 	// ============================================================
 
 	router := gin.New()
@@ -192,7 +165,7 @@ func main() {
 	)
 
 	// ============================================================
-	// GLOBAL SECURITY MIDDLEWARE
+	// SECURITY MIDDLEWARE
 	// ============================================================
 
 	router.Use(
@@ -219,7 +192,7 @@ func main() {
 	)
 
 	// ============================================================
-	// TRUSTED PROXY CONFIGURATION
+	// TRUSTED PROXIES
 	// ============================================================
 
 	if err := router.SetTrustedProxies(nil); err != nil {
@@ -230,6 +203,71 @@ func main() {
 	}
 
 	// ============================================================
+	// FRONTEND RENDERER
+	// ============================================================
+
+	/*
+		IMPORTANT:
+
+		The program is normally started from:
+
+		C:\go-tools\chatt-application\backend
+
+		Therefore:
+
+		../frontend/public
+
+		resolves to:
+
+		C:\go-tools\chatt-application\frontend\public
+	*/
+
+	frontendPublicDir := "../frontend/public"
+
+	frontendRenderer, err := frontend.NewRenderer(
+		frontendPublicDir,
+	)
+
+	if err != nil {
+		log.Fatalf(
+			"frontend renderer initialization error: %v",
+			err,
+		)
+	}
+
+	frontendRenderer.SetAppName(
+		"ChatApplication",
+	)
+
+	frontendRenderer.SetDescription(
+		"Secure real-time chat application",
+	)
+
+	// In debug mode templates are re-parsed on every request,
+	// so HTML edits show up on refresh without a restart.
+	frontendRenderer.SetDevMode(gin.Mode() != gin.ReleaseMode)
+
+	// Logs a warning for every page template that is missing.
+	frontendRenderer.CheckPages(
+		"home",
+		"register",
+		"login",
+		"verify-email",
+		"forgot-password",
+		"reset-password",
+		"404",
+	)
+
+	log.Printf(
+		"frontend directory: %s",
+		frontendRenderer.PublicDir(),
+	)
+
+	log.Println(
+		"frontend renderer initialized successfully",
+	)
+
+	// ============================================================
 	// ROUTES
 	// ============================================================
 
@@ -237,15 +275,16 @@ func main() {
 		router,
 		authHandler,
 		userHandler,
+		frontendRenderer,
 		&routes.Config{
 			JWTAccessSecret: cfg.JWTAccessSecret,
-			JWTIssuer:       "forensics-api",
-			JWTAudience:     "forensics-client",
+			JWTIssuer:       "chat-api",
+			JWTAudience:     "chat-client",
 		},
 	)
 
 	// ============================================================
-	// START SERVER
+	// SERVER
 	// ============================================================
 
 	address := ":" + cfg.AppPort
