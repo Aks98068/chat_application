@@ -1,0 +1,17 @@
+{
+  "name": "public",
+  "version": "1.0.0",
+  "main": "index.js",
+ "scripts": {
+  "dev:css": "npx @tailwindcss/cli -i ./css/input.css -o ./css/output.css --watch",
+  "build:css": "npx @tailwindcss/cli -i ./css/input.css -o ./css/output.css --minify"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}

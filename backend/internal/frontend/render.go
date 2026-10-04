@@ -454,44 +454,56 @@ func (r *Renderer) templateForPage(
 	// TEMPLATE PATHS
 	// --------------------------------------------------------
 
-	basePath := filepath.Join(
+	templatesDir := filepath.Join(
 		r.publicDir,
 		"templates",
+	)
+
+	basePath := filepath.Join(
+		templatesDir,
 		"layouts",
 		"base.html",
 	)
 
-	navbarPath := filepath.Join(
-		r.publicDir,
-		"templates",
-		"components",
-		"navbar.html",
-	)
-
-	footerPath := filepath.Join(
-		r.publicDir,
-		"templates",
-		"components",
-		"footer.html",
-	)
-
 	pagePath := filepath.Join(
-		r.publicDir,
-		"templates",
+		templatesDir,
 		"pages",
 		page+".html",
 	)
 
+	// Every .html file in components/ is loaded
+	// (navbar, footer, ui-kit with social icons and illustrations).
+	componentFiles, err := filepath.Glob(
+		filepath.Join(
+			templatesDir,
+			"components",
+			"*.html",
+		),
+	)
+
+	if err != nil {
+		return nil, fmt.Errorf(
+			"list component templates: %w",
+			err,
+		)
+	}
+
+	if len(componentFiles) == 0 {
+		return nil, fmt.Errorf(
+			"no component templates found in %s",
+			filepath.Join(templatesDir, "components"),
+		)
+	}
+
+	files := make([]string, 0, len(componentFiles)+2)
+
+	files = append(files, basePath)
+	files = append(files, componentFiles...)
+	files = append(files, pagePath)
+
 	// --------------------------------------------------------
 	// VERIFY FILES
 	// --------------------------------------------------------
-
-	files := []string{
-		basePath,
-		navbarPath,
-		footerPath,
-		pagePath,
-	}
 
 	for _, path := range files {
 
@@ -520,12 +532,7 @@ func (r *Renderer) templateForPage(
 	tmpl, err := template.
 		New("base").
 		Option("missingkey=error").
-		ParseFiles(
-			basePath,
-			navbarPath,
-			footerPath,
-			pagePath,
-		)
+		ParseFiles(files...)
 
 	if err != nil {
 		return nil, fmt.Errorf(

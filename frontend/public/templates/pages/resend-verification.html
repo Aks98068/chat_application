@@ -1,0 +1,685 @@
+{{ define "content" }}
+
+<!-- =========================================================
+     NEPCHAT RESEND VERIFICATION
+     ========================================================= -->
+
+<section class="min-h-[calc(100vh-5rem)] bg-[#F7F4EE] px-4 py-8 sm:px-6 lg:px-8">
+
+    <div class="mx-auto grid min-h-[620px] max-w-6xl overflow-hidden rounded-3xl border border-[#E2DED5] bg-white shadow-[0_24px_80px_rgba(23,26,31,0.08)] lg:grid-cols-2">
+
+        <!-- =================================================
+             BRAND PANEL
+             ================================================= -->
+
+        <div class="relative hidden overflow-hidden bg-[#171A1F] p-10 text-white lg:flex lg:flex-col lg:justify-between xl:p-14">
+
+            <!-- Decorative elements -->
+
+            <div class="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-[#F97316]/10 blur-3xl"></div>
+
+            <div class="absolute -bottom-32 -left-20 h-80 w-80 rounded-full bg-[#0F766E]/10 blur-3xl"></div>
+
+            <div class="relative z-10">
+
+                <!-- Brand -->
+
+                <a
+                    href="/"
+                    class="mb-14 inline-flex items-center gap-3"
+                    aria-label="NepChat home"
+                >
+                    <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-[#F97316] text-lg font-black text-white shadow-lg shadow-[#F97316]/20">
+                        N
+                    </span>
+
+                    <span class="text-xl font-bold tracking-tight">
+                        NepChat
+                    </span>
+                </a>
+
+                <!-- Badge -->
+
+                <span class="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-white/70">
+                    Email verification
+                </span>
+
+                <!-- Heading -->
+
+                <h1 class="mt-7 max-w-lg text-4xl font-black leading-[1.05] tracking-tight xl:text-5xl">
+                    Didn't receive
+                    <br>
+                    <span class="text-[#F97316]">
+                        your email?
+                    </span>
+                </h1>
+
+                <p class="mt-6 max-w-md text-base leading-7 text-white/60">
+                    No problem. Enter the email address you used
+                    for your NepChat account and we'll send
+                    you a new verification link.
+                </p>
+
+                <!-- Points -->
+
+                <div class="mt-10 space-y-5">
+
+                    <div class="flex items-center gap-3 text-sm text-white/80">
+                        <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/5 text-[#F97316]">
+                            ✓
+                        </span>
+
+                        Activate your NepChat account
+                    </div>
+
+                    <div class="flex items-center gap-3 text-sm text-white/80">
+                        <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/5 text-[#F97316]">
+                            ✓
+                        </span>
+
+                        Keep your account protected
+                    </div>
+
+                    <div class="flex items-center gap-3 text-sm text-white/80">
+                        <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/5 text-[#F97316]">
+                            ✓
+                        </span>
+
+                        Get ready to connect across Nepal
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Bottom -->
+
+            <div class="relative z-10 flex items-center justify-between border-t border-white/10 pt-6">
+
+                <div>
+                    <p class="text-sm font-semibold">
+                        NepChat
+                    </p>
+
+                    <p class="mt-1 text-xs text-white/40">
+                        Built for conversations across Nepal
+                    </p>
+                </div>
+
+                <div class="flex items-center gap-2 text-xs text-white/40">
+                    <span class="h-2 w-2 rounded-full bg-[#0F766E]"></span>
+                    Secure registration
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             FORM PANEL
+             ================================================= -->
+
+        <div class="flex items-center justify-center p-6 sm:p-10 lg:p-12 xl:p-16">
+
+            <div class="w-full max-w-md">
+
+                <!-- =================================================
+                     MOBILE LOGO
+                     ================================================= -->
+
+                <a
+                    href="/"
+                    class="mb-10 inline-flex items-center gap-3 lg:hidden"
+                    aria-label="NepChat home"
+                >
+                    <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#F97316] text-base font-black text-white">
+                        N
+                    </span>
+
+                    <span class="text-lg font-bold text-[#171A1F]">
+                        NepChat
+                    </span>
+                </a>
+
+
+                <!-- =================================================
+                     HEADER
+                     ================================================= -->
+
+                <div class="mb-8">
+
+                    <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#FFF1E8] text-[#F97316]">
+
+                        <!-- Mail icon -->
+
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="28"
+                            height="28"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            aria-hidden="true"
+                        >
+                            <rect
+                                width="20"
+                                height="16"
+                                x="2"
+                                y="4"
+                                rx="2"
+                            />
+
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                        </svg>
+
+                    </div>
+
+                    <h1 class="text-3xl font-black tracking-tight text-[#171A1F]">
+                        Resend verification
+                    </h1>
+
+                    <p class="mt-3 leading-7 text-[#626A73]">
+                        Enter the email address associated with
+                        your NepChat account and we'll send
+                        you a new verification link.
+                    </p>
+
+                </div>
+
+
+                <!-- =================================================
+                     SUCCESS MESSAGE
+                     ================================================= -->
+
+                <div
+                    id="successMessage"
+                    class="mb-6 hidden rounded-2xl border border-[#A7F3D0] bg-[#ECFDF5] p-4"
+                    role="status"
+                    aria-live="polite"
+                >
+
+                    <div class="flex items-start gap-3">
+
+                        <span class="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-white text-[#0F766E]">
+
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                aria-hidden="true"
+                            >
+                                <path d="M20 6 9 17l-5-5" />
+                            </svg>
+
+                        </span>
+
+                        <div>
+
+                            <p class="text-sm font-bold text-[#065F46]">
+                                Verification email sent
+                            </p>
+
+                            <p
+                                id="successText"
+                                class="mt-1 text-sm leading-5 text-[#047857]"
+                            >
+                                If an account exists with this email,
+                                a new verification email has been sent.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     ERROR MESSAGE
+                     ================================================= -->
+
+                <div
+                    id="errorMessage"
+                    class="mb-6 hidden rounded-2xl border border-[#FECACA] bg-[#FEF2F2] p-4"
+                    role="alert"
+                    aria-live="assertive"
+                >
+
+                    <div class="flex items-start gap-3">
+
+                        <span class="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-white text-[#DC2626]">
+
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                aria-hidden="true"
+                            >
+                                <circle
+                                    cx="12"
+                                    cy="12"
+                                    r="10"
+                                />
+
+                                <path d="m15 9-6 6" />
+                                <path d="m9 9 6 6" />
+                            </svg>
+
+                        </span>
+
+                        <div>
+
+                            <p class="text-sm font-bold text-[#991B1B]">
+                                Unable to resend email
+                            </p>
+
+                            <p
+                                id="errorText"
+                                class="mt-1 text-sm leading-5 text-[#B91C1C]"
+                            >
+                                Unable to resend the verification email.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     FORM
+                     ================================================= -->
+
+                <form
+                    id="resendVerificationForm"
+                    class="space-y-5"
+                    novalidate
+                >
+
+                    <div>
+
+                        <label
+                            for="email"
+                            class="mb-2 block text-sm font-semibold text-[#171A1F]"
+                        >
+                            Email address
+                        </label>
+
+                        <input
+                            id="email"
+                            name="email"
+                            type="email"
+                            autocomplete="email"
+                            inputmode="email"
+                            required
+                            placeholder="you@example.com"
+                            class="h-12 w-full rounded-xl border border-[#D9D5CC] bg-white px-4 text-sm text-[#171A1F] outline-none transition placeholder:text-[#9CA3AF] focus:border-[#F97316] focus:ring-4 focus:ring-[#F97316]/10 disabled:cursor-not-allowed disabled:bg-[#F7F4EE]"
+                        />
+
+                    </div>
+
+
+                    <!-- Submit -->
+
+                    <button
+                        id="resendButton"
+                        type="submit"
+                        class="flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#F97316] px-5 text-sm font-bold text-white shadow-lg shadow-[#F97316]/20 transition hover:bg-[#EA580C] hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-60"
+                    >
+
+                        <!-- Spinner -->
+
+                        <svg
+                            id="resendSpinner"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="hidden animate-spin"
+                            aria-hidden="true"
+                        >
+                            <path d="M21 12a9 9 0 1 1-6.219-8.56" />
+                        </svg>
+
+                        <span id="resendButtonText">
+                            Resend verification email
+                        </span>
+
+                    </button>
+
+                </form>
+
+
+                <!-- =================================================
+                     LINKS
+                     ================================================= -->
+
+                <div class="mt-7 flex flex-col items-center gap-3 text-sm">
+
+                    <a
+                        href="/verify-email"
+                        class="font-semibold text-[#F97316] transition hover:text-[#EA580C]"
+                    >
+                        Back to email verification
+                    </a>
+
+                    <a
+                        href="/login"
+                        class="text-[#626A73] transition hover:text-[#171A1F]"
+                    >
+                        Back to login
+                    </a>
+
+                </div>
+
+
+                <!-- =================================================
+                     SECURITY FOOTER
+                     ================================================= -->
+
+                <div class="mt-10 border-t border-[#E2DED5] pt-6">
+
+                    <div class="flex items-center justify-center gap-2 text-xs font-semibold text-[#626A73]">
+
+                        <span class="flex h-6 w-6 items-center justify-center rounded-md bg-[#F7F4EE] text-[#0F766E]">
+                            ✓
+                        </span>
+
+                        Protected NepChat account verification
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     RESEND VERIFICATION JAVASCRIPT
+     ========================================================= -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const form =
+        document.getElementById("resendVerificationForm");
+
+    const emailInput =
+        document.getElementById("email");
+
+    const button =
+        document.getElementById("resendButton");
+
+    const buttonText =
+        document.getElementById("resendButtonText");
+
+    const spinner =
+        document.getElementById("resendSpinner");
+
+    const successMessage =
+        document.getElementById("successMessage");
+
+    const successText =
+        document.getElementById("successText");
+
+    const errorMessage =
+        document.getElementById("errorMessage");
+
+    const errorText =
+        document.getElementById("errorText");
+
+
+    function hideMessages() {
+
+        if (successMessage) {
+            successMessage.classList.add("hidden");
+        }
+
+        if (errorMessage) {
+            errorMessage.classList.add("hidden");
+        }
+
+    }
+
+
+    function setLoading(loading) {
+
+        if (!button || !buttonText || !spinner) {
+            return;
+        }
+
+        button.disabled = loading;
+
+        if (emailInput) {
+            emailInput.disabled = loading;
+        }
+
+        if (loading) {
+
+            spinner.classList.remove("hidden");
+
+            buttonText.textContent =
+                "Sending...";
+
+        } else {
+
+            spinner.classList.add("hidden");
+
+            buttonText.textContent =
+                "Resend verification email";
+
+        }
+
+    }
+
+
+    function showSuccess(message) {
+
+        if (!successMessage || !successText) {
+            return;
+        }
+
+        successText.textContent =
+            message ||
+            "If an account exists with this email, a new verification email has been sent.";
+
+        successMessage.classList.remove("hidden");
+
+    }
+
+
+    function showError(message) {
+
+        if (!errorMessage || !errorText) {
+            return;
+        }
+
+        errorText.textContent =
+            message ||
+            "Unable to resend the verification email.";
+
+        errorMessage.classList.remove("hidden");
+
+    }
+
+
+    if (!form) {
+        console.error(
+            "NepChat resend verification form was not found."
+        );
+
+        return;
+    }
+
+
+    form.addEventListener(
+        "submit",
+        async function (event) {
+
+            event.preventDefault();
+
+            hideMessages();
+
+
+            const email =
+                emailInput
+                    ? emailInput.value.trim()
+                    : "";
+
+
+            if (!email) {
+
+                showError(
+                    "Please enter your email address."
+                );
+
+                if (emailInput) {
+                    emailInput.focus();
+                }
+
+                return;
+
+            }
+
+
+            /*
+             * Basic browser-side email validation.
+             */
+
+            if (!emailInput || !emailInput.checkValidity()) {
+
+                showError(
+                    "Please enter a valid email address."
+                );
+
+                if (emailInput) {
+                    emailInput.focus();
+                }
+
+                return;
+
+            }
+
+
+            setLoading(true);
+
+
+            try {
+
+                console.log(
+                    "Sending NepChat verification email..."
+                );
+
+
+                const response =
+                    await fetch(
+                        "/api/v1/auth/resend-verification",
+                        {
+                            method: "POST",
+
+                            headers: {
+                                "Content-Type":
+                                    "application/json"
+                            },
+
+                            body: JSON.stringify({
+                                email: email
+                            })
+                        }
+                    );
+
+
+                let data = {};
+
+                try {
+
+                    data =
+                        await response.json();
+
+                } catch (jsonError) {
+
+                    console.warn(
+                        "NepChat resend verification response was not JSON.",
+                        jsonError
+                    );
+
+                }
+
+
+                if (!response.ok) {
+
+                    throw new Error(
+                        data.message ||
+                        data.error ||
+                        "Unable to resend the verification email."
+                    );
+
+                }
+
+
+                console.log(
+                    "NepChat verification email request successful."
+                );
+
+
+                showSuccess(
+                    data.message ||
+                    "If an account exists with this email, a new verification email has been sent."
+                );
+
+
+            } catch (error) {
+
+                console.error(
+                    "NepChat resend verification failed:",
+                    error
+                );
+
+
+                showError(
+                    error instanceof Error
+                        ? error.message
+                        : "Unable to resend the verification email."
+                );
+
+            } finally {
+
+                setLoading(false);
+
+            }
+
+        }
+    );
+
+});
+</script>
+
+{{ end }}

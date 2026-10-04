@@ -1,0 +1,1024 @@
+{{ define "content" }}
+
+<!-- =========================================================
+     NEPCHAT LOGIN
+     ========================================================= -->
+
+<div class="bg-[#F7F4EE] px-4 pb-16 pt-10 text-[#171A1F] sm:px-6 sm:pb-20 sm:pt-14 lg:px-8 lg:pb-24 lg:pt-16">
+
+    <div
+        class="mx-auto grid min-h-[calc(100vh-12rem)] max-w-7xl overflow-hidden rounded-3xl border border-[#E2DED5] bg-white shadow-xl shadow-[#171A1F]/5 lg:grid-cols-2"
+    >
+
+        <!-- =====================================================
+             LEFT BRAND SECTION
+             ===================================================== -->
+
+        <section class="relative hidden overflow-hidden bg-[#171A1F] lg:flex">
+
+            <!-- Background decoration -->
+            <div class="pointer-events-none absolute inset-0 overflow-hidden">
+
+                <div
+                    class="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-[#F97316]/10 blur-3xl"
+                ></div>
+
+                <div
+                    class="absolute -bottom-40 -left-40 h-[28rem] w-[28rem] rounded-full bg-[#0F766E]/10 blur-3xl"
+                ></div>
+
+                <div
+                    class="absolute right-20 top-24 h-2 w-2 rounded-full bg-[#F97316]"
+                ></div>
+
+                <div
+                    class="absolute right-32 top-40 h-1.5 w-1.5 rounded-full bg-white/30"
+                ></div>
+
+                <div
+                    class="absolute bottom-32 left-24 h-2 w-2 rounded-full bg-[#0F766E]"
+                ></div>
+
+                <div
+                    class="absolute bottom-24 right-24 h-1.5 w-1.5 rounded-full bg-[#F97316]/60"
+                ></div>
+
+            </div>
+
+
+            <div class="relative flex w-full items-center px-10 py-16 xl:px-20">
+
+                <div class="max-w-xl">
+
+                    <!-- =================================================
+                         BRAND BADGE
+                         ================================================= -->
+
+                    <div
+                        class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white/80"
+                    >
+
+                        <span
+                            class="flex h-6 w-6 items-center justify-center rounded-full bg-[#F97316] text-xs font-black text-white"
+                        >
+                            N
+                        </span>
+
+                        NepChat · Nepal-first messaging
+
+                    </div>
+
+
+                    <!-- =================================================
+                         HEADING
+                         ================================================= -->
+
+                    <h1
+                        class="mt-8 text-5xl font-black leading-[1.02] tracking-[-0.04em] text-white xl:text-6xl"
+                    >
+
+                        Stay close.
+
+                        <br>
+
+                        <span class="text-[#F97316]">
+                            Wherever Nepal takes you.
+                        </span>
+
+                    </h1>
+
+
+                    <!-- =================================================
+                         DESCRIPTION
+                         ================================================= -->
+
+                    <p
+                        class="mt-7 max-w-lg text-lg leading-8 text-white/60"
+                    >
+                        From family conversations and college groups
+                        to friends, teams, and everyday plans,
+                        NepChat brings your conversations together
+                        in one simple place.
+                    </p>
+
+
+                    <!-- =================================================
+                         FEATURES
+                         ================================================= -->
+
+                    <div class="mt-10 space-y-5">
+
+                        <!-- Point 1 -->
+                        <div class="flex items-center gap-4">
+
+                            <span
+                                class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#F97316]/15 text-sm font-bold text-[#F97316]"
+                            >
+                                ✓
+                            </span>
+
+                            <span class="text-sm font-medium text-white/80">
+                                Conversations for friends, family, and teams
+                            </span>
+
+                        </div>
+
+
+                        <!-- Point 2 -->
+                        <div class="flex items-center gap-4">
+
+                            <span
+                                class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#0F766E]/15 text-sm font-bold text-[#0F766E]"
+                            >
+                                ✓
+                            </span>
+
+                            <span class="text-sm font-medium text-white/80">
+                                Built with Nepal and Nepali users in mind
+                            </span>
+
+                        </div>
+
+
+                        <!-- Point 3 -->
+                        <div class="flex items-center gap-4">
+
+                            <span
+                                class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/10 text-sm font-bold text-white"
+                            >
+                                ✓
+                            </span>
+
+                            <span class="text-sm font-medium text-white/80">
+                                Security-focused account authentication
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         CHAT PREVIEW
+                         ================================================= -->
+
+                    <div
+                        class="mt-12 max-w-md rounded-2xl border border-white/10 bg-white/[0.04] p-4 backdrop-blur-sm"
+                    >
+
+                        <!-- Chat header -->
+                        <div
+                            class="flex items-center gap-3 border-b border-white/10 pb-4"
+                        >
+
+                            <div
+                                class="flex h-9 w-9 items-center justify-center rounded-full bg-[#F97316] text-sm font-bold text-white"
+                            >
+                                P
+                            </div>
+
+                            <div>
+
+                                <p class="text-sm font-semibold text-white">
+                                    Pragya
+                                </p>
+
+                                <p class="text-xs text-white/40">
+                                    Kathmandu
+                                </p>
+
+                            </div>
+
+                            <span
+                                class="ml-auto h-2 w-2 rounded-full bg-[#0F766E]"
+                            ></span>
+
+                        </div>
+
+
+                        <!-- Messages -->
+                        <div class="space-y-3 pt-4">
+
+                            <div class="flex">
+
+                                <div
+                                    class="rounded-2xl rounded-bl-md bg-white/10 px-4 py-2 text-xs text-white/70"
+                                >
+                                    Are you coming to Kathmandu tomorrow?
+                                </div>
+
+                            </div>
+
+
+                            <div class="flex justify-end">
+
+                                <div
+                                    class="rounded-2xl rounded-br-md bg-[#F97316] px-4 py-2 text-xs text-white"
+                                >
+                                    Yes, I'll be there. 😊
+                                </div>
+
+                            </div>
+
+
+                            <div class="flex">
+
+                                <div
+                                    class="rounded-2xl rounded-bl-md bg-white/10 px-4 py-2 text-xs text-white/70"
+                                >
+                                    Great! See you then.
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         LOCATION / IDENTITY
+                         ================================================= -->
+
+                    <div class="mt-7 flex flex-wrap gap-2">
+
+                        <span
+                            class="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-white/50"
+                        >
+                            Kathmandu
+                        </span>
+
+                        <span
+                            class="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-white/50"
+                        >
+                            Pokhara
+                        </span>
+
+                        <span
+                            class="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-white/50"
+                        >
+                            Biratnagar
+                        </span>
+
+                        <span
+                            class="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-white/50"
+                        >
+                            Everywhere in Nepal
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             RIGHT LOGIN SECTION
+             ===================================================== -->
+
+        <section
+            class="flex items-center justify-center px-5 py-12 sm:px-8 lg:px-12"
+        >
+
+            <div class="w-full max-w-md">
+
+
+                <!-- =================================================
+                     MOBILE LOGO
+                     ================================================= -->
+
+                <div class="mb-10 flex justify-center lg:hidden">
+
+                    <a
+                        href="/"
+                        class="inline-flex items-center gap-3"
+                        aria-label="NepChat home"
+                    >
+
+                        <span
+                            class="flex h-11 w-11 items-center justify-center rounded-xl bg-[#171A1F] text-lg font-black text-white shadow-lg"
+                        >
+                            N
+                        </span>
+
+                        <span
+                            class="text-xl font-black tracking-tight text-[#171A1F]"
+                        >
+                            NepChat
+                        </span>
+
+                    </a>
+
+                </div>
+
+
+                <!-- =================================================
+                     LOGIN CARD
+                     ================================================= -->
+
+                <div
+                    class="rounded-3xl border border-[#E2DED5] bg-white p-7 shadow-xl shadow-[#171A1F]/5 sm:p-9"
+                >
+
+                    <!-- Desktop logo -->
+                    <a
+                        href="/"
+                        class="hidden items-center gap-3 lg:inline-flex"
+                        aria-label="NepChat home"
+                    >
+
+                        <span
+                            class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#171A1F] text-base font-black text-white"
+                        >
+                            N
+                        </span>
+
+                        <span
+                            class="text-lg font-black tracking-tight text-[#171A1F]"
+                        >
+                            NepChat
+                        </span>
+
+                    </a>
+
+
+                    <!-- =================================================
+                         HEADING
+                         ================================================= -->
+
+                    <div class="mt-8">
+
+                        <div
+                            class="mb-3 inline-flex items-center rounded-full bg-[#F97316]/10 px-3 py-1 text-xs font-bold text-[#F97316]"
+                        >
+                            Welcome back
+                        </div>
+
+                        <h2
+                            class="text-3xl font-black tracking-[-0.03em] text-[#171A1F]"
+                        >
+                            Good to see you.
+                        </h2>
+
+                        <p
+                            class="mt-2 text-sm leading-6 text-[#626A73]"
+                        >
+                            Sign in to continue your conversations on NepChat.
+                        </p>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         ERROR MESSAGE
+                         ================================================= -->
+
+                    <div
+                        id="login-error"
+                        class="mt-5 hidden rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-medium text-red-700"
+                        role="alert"
+                    ></div>
+
+
+                    <!-- =================================================
+                         LOGIN FORM
+                         ================================================= -->
+
+                    <form
+                        id="login-form"
+                        class="mt-7 space-y-5"
+                    >
+
+                        <!-- =================================================
+                             EMAIL
+                             ================================================= -->
+
+                        <div>
+
+                            <label
+                                for="email"
+                                class="mb-2 block text-sm font-semibold text-[#171A1F]"
+                            >
+                                Email address
+                            </label>
+
+                            <div class="relative">
+
+                                <!-- Mail icon -->
+                                <svg
+                                    class="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-[#626A73]"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+
+                                    <rect
+                                        width="20"
+                                        height="16"
+                                        x="2"
+                                        y="4"
+                                        rx="2"
+                                    ></rect>
+
+                                    <path
+                                        d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"
+                                    ></path>
+
+                                </svg>
+
+                                <input
+                                    id="email"
+                                    name="email"
+                                    type="email"
+                                    placeholder="you@example.com"
+                                    autocomplete="email"
+                                    required
+                                    class="h-12 w-full rounded-xl border border-[#D8D3CA] bg-[#FDFCFA] pl-12 pr-4 text-sm text-[#171A1F] outline-none transition placeholder:text-[#9A9FA5] focus:border-[#F97316] focus:ring-4 focus:ring-[#F97316]/10 disabled:cursor-not-allowed disabled:opacity-60"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- =================================================
+                             PASSWORD
+                             ================================================= -->
+
+                        <div>
+
+                            <div
+                                class="mb-2 flex items-center justify-between"
+                            >
+
+                                <label
+                                    for="password"
+                                    class="block text-sm font-semibold text-[#171A1F]"
+                                >
+                                    Password
+                                </label>
+
+                                <a
+                                    href="/forgot-password"
+                                    class="text-xs font-semibold text-[#F97316] transition hover:text-[#d95f0b]"
+                                >
+                                    Forgot password?
+                                </a>
+
+                            </div>
+
+
+                            <div class="relative">
+
+                                <!-- Lock icon -->
+                                <svg
+                                    class="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-[#626A73]"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+
+                                    <rect
+                                        width="18"
+                                        height="11"
+                                        x="3"
+                                        y="11"
+                                        rx="2"
+                                        ry="2"
+                                    ></rect>
+
+                                    <path
+                                        d="M7 11V7a5 5 0 0 1 10 0v4"
+                                    ></path>
+
+                                </svg>
+
+
+                                <!-- Password input -->
+                                <input
+                                    id="password"
+                                    name="password"
+                                    type="password"
+                                    placeholder="Enter your password"
+                                    autocomplete="current-password"
+                                    required
+                                    class="h-12 w-full rounded-xl border border-[#D8D3CA] bg-[#FDFCFA] pl-12 pr-12 text-sm text-[#171A1F] outline-none transition placeholder:text-[#9A9FA5] focus:border-[#F97316] focus:ring-4 focus:ring-[#F97316]/10 disabled:cursor-not-allowed disabled:opacity-60"
+                                >
+
+
+                                <!-- Toggle password -->
+                                <button
+                                    id="toggle-password"
+                                    type="button"
+                                    class="absolute right-3 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-lg text-[#626A73] transition hover:bg-[#F7F4EE] hover:text-[#171A1F] disabled:cursor-not-allowed disabled:opacity-50"
+                                    aria-label="Show password"
+                                >
+
+                                    <!-- Eye -->
+                                    <svg
+                                        id="eye-open"
+                                        class="h-4 w-4"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+
+                                        <path
+                                            d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"
+                                        ></path>
+
+                                        <circle
+                                            cx="12"
+                                            cy="12"
+                                            r="3"
+                                        ></circle>
+
+                                    </svg>
+
+
+                                    <!-- Eye off -->
+                                    <svg
+                                        id="eye-closed"
+                                        class="hidden h-4 w-4"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+
+                                        <path
+                                            d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.744 10.744 0 0 1-1.242 2.144"
+                                        ></path>
+
+                                        <path
+                                            d="M14.084 14.158a3 3 0 0 1-4.242-4.242"
+                                        ></path>
+
+                                        <path
+                                            d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.35-5.242"
+                                        ></path>
+
+                                        <path d="m2 2 20 20"></path>
+
+                                    </svg>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- =================================================
+                             SUBMIT
+                             ================================================= -->
+
+                        <button
+                            id="login-submit"
+                            type="submit"
+                            class="flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#171A1F] px-5 text-sm font-bold text-white shadow-lg shadow-[#171A1F]/10 transition duration-200 hover:-translate-y-0.5 hover:bg-[#2b3037] disabled:cursor-not-allowed disabled:opacity-60"
+                        >
+
+                            <!-- Spinner -->
+                            <svg
+                                id="login-spinner"
+                                class="hidden h-4 w-4 animate-spin"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                            >
+
+                                <circle
+                                    class="opacity-25"
+                                    cx="12"
+                                    cy="12"
+                                    r="10"
+                                    stroke="currentColor"
+                                    stroke-width="4"
+                                ></circle>
+
+                                <path
+                                    class="opacity-75"
+                                    fill="currentColor"
+                                    d="M4 12a8 8 0 0 1 8-8V0C5.373 0 0 5.373 0 12h4z"
+                                ></path>
+
+                            </svg>
+
+                            <span id="login-submit-text">
+                                Sign in to NepChat
+                            </span>
+
+                        </button>
+
+                    </form>
+
+
+                    <!-- =================================================
+                         REGISTER
+                         ================================================= -->
+
+                    <p
+                        class="mt-7 text-center text-sm text-[#626A73]"
+                    >
+
+                        New to NepChat?
+
+                        <a
+                            href="/register"
+                            class="font-bold text-[#F97316] transition hover:text-[#d95f0b]"
+                        >
+                            Create an account
+                        </a>
+
+                    </p>
+
+
+                    <!-- =================================================
+                         SECURITY NOTE
+                         ================================================= -->
+
+                    <div
+                        class="mt-7 flex items-center justify-center gap-2 border-t border-[#E2DED5] pt-5 text-xs text-[#626A73]"
+                    >
+
+                        <svg
+                            class="h-4 w-4 text-[#0F766E]"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+
+                            <rect
+                                width="18"
+                                height="11"
+                                x="3"
+                                y="11"
+                                rx="2"
+                                ry="2"
+                            ></rect>
+
+                            <path
+                                d="M7 11V7a5 5 0 0 1 10 0v4"
+                            ></path>
+
+                        </svg>
+
+                        <span>
+                            Security-focused account authentication
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     MOBILE TRUST TEXT
+                     ================================================= -->
+
+                <div
+                    class="mt-6 text-center text-xs leading-5 text-[#626A73] lg:hidden"
+                >
+                    Built with Nepal in mind · Simple conversations ·
+                    Security-focused authentication
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     LOGIN JAVASCRIPT
+     ========================================================= -->
+
+<script>
+(function () {
+
+    const form =
+        document.getElementById("login-form");
+
+    const emailInput =
+        document.getElementById("email");
+
+    const passwordInput =
+        document.getElementById("password");
+
+    const togglePassword =
+        document.getElementById("toggle-password");
+
+    const eyeOpen =
+        document.getElementById("eye-open");
+
+    const eyeClosed =
+        document.getElementById("eye-closed");
+
+    const submitButton =
+        document.getElementById("login-submit");
+
+    const submitText =
+        document.getElementById("login-submit-text");
+
+    const spinner =
+        document.getElementById("login-spinner");
+
+    const errorBox =
+        document.getElementById("login-error");
+
+
+    /* =========================================================
+       PASSWORD VISIBILITY
+       ========================================================= */
+
+    togglePassword.addEventListener("click", function () {
+
+        const isPassword =
+            passwordInput.type === "password";
+
+        passwordInput.type =
+            isPassword ? "text" : "password";
+
+        eyeOpen.classList.toggle(
+            "hidden",
+            !isPassword
+        );
+
+        eyeClosed.classList.toggle(
+            "hidden",
+            isPassword
+        );
+
+        togglePassword.setAttribute(
+            "aria-label",
+            isPassword
+                ? "Hide password"
+                : "Show password"
+        );
+
+    });
+
+
+    /* =========================================================
+       ERROR
+       ========================================================= */
+
+    function showError(message) {
+
+        errorBox.textContent = message;
+
+        errorBox.classList.remove("hidden");
+
+    }
+
+
+    function clearError() {
+
+        errorBox.textContent = "";
+
+        errorBox.classList.add("hidden");
+
+    }
+
+
+    /* =========================================================
+       LOADING
+       ========================================================= */
+
+    function setLoading(loading) {
+
+        submitButton.disabled = loading;
+
+        emailInput.disabled = loading;
+
+        passwordInput.disabled = loading;
+
+        togglePassword.disabled = loading;
+
+
+        if (loading) {
+
+            spinner.classList.remove("hidden");
+
+            submitText.textContent =
+                "Signing in...";
+
+        } else {
+
+            spinner.classList.add("hidden");
+
+            submitText.textContent =
+                "Sign in to NepChat";
+
+        }
+
+    }
+
+
+    /* =========================================================
+       LOGIN
+       ========================================================= */
+
+    form.addEventListener(
+        "submit",
+        async function (event) {
+
+            event.preventDefault();
+
+            clearError();
+
+
+            const identifier =
+                emailInput.value.trim();
+
+            const password =
+                passwordInput.value;
+
+
+            if (!identifier || !password) {
+
+                showError(
+                    "Please enter your email address and password."
+                );
+
+                return;
+
+            }
+
+
+            setLoading(true);
+
+
+            try {
+
+                const response =
+                    await fetch(
+                        "/api/v1/auth/login",
+                        {
+                            method: "POST",
+
+                            headers: {
+                                "Content-Type":
+                                    "application/json"
+                            },
+
+                            body: JSON.stringify({
+                                identifier: identifier,
+                                password: password
+                            })
+                        }
+                    );
+
+
+                let data = {};
+
+                try {
+
+                    data =
+                        await response.json();
+
+                } catch (_) {
+
+                    data = {};
+
+                }
+
+
+                /* =================================================
+                   LOGIN FAILURE
+                   ================================================= */
+
+                if (!response.ok) {
+
+                    const message =
+                        data.error ||
+                        data.message ||
+                        "Unable to sign in. Please try again.";
+
+
+                    const normalized =
+                        String(message).toLowerCase();
+
+
+                    /* =============================================
+                       UNVERIFIED EMAIL
+                       ============================================= */
+
+                    if (
+                        normalized.includes(
+                            "email address is not verified"
+                        ) ||
+                        normalized.includes(
+                            "email not verified"
+                        )
+                    ) {
+
+                        window.location.href =
+                            "/verify-email?email=" +
+                            encodeURIComponent(
+                                identifier
+                            );
+
+                        return;
+
+                    }
+
+
+                    showError(message);
+
+                    return;
+
+                }
+
+
+                /* =================================================
+                   STORE ACCESS TOKEN
+                   ================================================= */
+
+                if (data.accessToken) {
+
+                    sessionStorage.setItem(
+                        "accessToken",
+                        data.accessToken
+                    );
+
+                }
+
+
+                /* =================================================
+                   STORE REFRESH TOKEN
+                   ================================================= */
+
+                if (data.refreshToken) {
+
+                    sessionStorage.setItem(
+                        "refreshToken",
+                        data.refreshToken
+                    );
+
+                }
+
+
+                /* =================================================
+                   ROLE BASED REDIRECT
+                   ================================================= */
+
+                if (
+                    data.user &&
+                    data.user.role === "ADMIN"
+                ) {
+
+                    window.location.href =
+                        "/admin";
+
+                } else {
+
+                    window.location.href =
+                        "/dashboard";
+
+                }
+
+            } catch (error) {
+
+                console.error(
+                    "Login error:",
+                    error
+                );
+
+                showError(
+                    "Unable to connect to the server. Please try again."
+                );
+
+            } finally {
+
+                setLoading(false);
+
+            }
+
+        }
+    );
+
+})();
+</script>
+
+{{ end }}

@@ -1,382 +1,1137 @@
 {{ define "content" }}
 
-<div class="auth-page">
-    <!-- =====================================================
-         LEFT BRAND PANEL
-    ====================================================== -->
-    <section class="auth-brand">
-        <div class="auth-brand-content">
+<!-- =========================================================
+     NEPCHAT REGISTER
+     ========================================================= -->
 
-            <span class="auth-brand-badge">
-                Welcome to ChatApplication
-            </span>
+<section class="bg-[#F7F4EE] px-4 pb-16 pt-28 text-[#171A1F] sm:px-6 lg:px-8">
 
-            <h1 class="auth-brand-title">
-                Everything social.
-                <br>
-                In one place.
-            </h1>
+    <div
+        class="mx-auto flex w-full max-w-6xl items-center justify-center"
+    >
 
-            <p class="auth-brand-description">
-                Connect your social accounts, organize content,
-                schedule publications, and monitor your audience
-                from one clean workspace.
-            </p>
+        <div
+            class="grid w-full overflow-hidden rounded-3xl border border-[#E2DED5] bg-white shadow-[0_20px_70px_rgba(23,26,31,0.10)] lg:grid-cols-[0.95fr_1.05fr]"
+        >
 
-            <div class="auth-brand-points">
+            <!-- =================================================
+                 LEFT BRAND / NEPAL PANEL
+                 ================================================= -->
 
-                <div class="auth-brand-point">
-                    <span class="auth-brand-point-icon">
-                        ✓
-                    </span>
-                    Centralized social account management
+            <div
+                class="relative hidden min-h-[680px] overflow-hidden bg-[#F7F4EE] lg:flex lg:flex-col lg:justify-between"
+            >
+
+                <!-- Decorative background -->
+
+                <div
+                    class="absolute left-8 top-10 h-2 w-2 rounded-full bg-[#F97316] opacity-40"
+                ></div>
+
+                <div
+                    class="absolute right-12 top-24 h-2 w-2 rounded-full bg-[#0F766E] opacity-40"
+                ></div>
+
+                <div
+                    class="absolute bottom-24 left-12 h-2 w-2 rounded-full bg-[#F97316] opacity-30"
+                ></div>
+
+                <div
+                    class="absolute right-20 bottom-32 h-1.5 w-1.5 rounded-full bg-[#0F766E] opacity-40"
+                ></div>
+
+                <div
+                    class="absolute -left-20 -top-20 h-64 w-64 rounded-full border border-[#E2DED5]"
+                ></div>
+
+                <div
+                    class="absolute -left-10 -top-10 h-44 w-44 rounded-full border border-[#E2DED5] opacity-60"
+                ></div>
+
+
+                <!-- =================================================
+                     MAIN CONTENT
+                     ================================================= -->
+
+                <div class="relative z-10 p-10 xl:p-14">
+
+                    <!-- Brand label -->
+
+                    <div class="mb-10">
+
+                        <div
+                            class="mb-5 inline-flex items-center gap-2 rounded-full border border-[#E2DED5] bg-white px-3 py-1.5"
+                        >
+
+                            <span
+                                class="flex h-5 w-5 items-center justify-center rounded-full bg-[#171A1F] text-[9px] font-black text-[#F97316]"
+                            >
+                                N
+                            </span>
+
+                            <span
+                                class="font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-[#626A73]"
+                            >
+                                NepChat · Nepal-first messaging
+                            </span>
+
+                        </div>
+
+
+                        <h1
+                            class="max-w-md text-4xl font-black leading-tight tracking-tight text-[#171A1F] xl:text-5xl"
+                        >
+
+                            Your people.
+
+                            <br />
+
+                            Your conversations.
+
+                            <br />
+
+                            <span class="text-[#F97316]">
+                                Your NepChat.
+                            </span>
+
+                        </h1>
+
+
+                        <p
+                            class="mt-5 max-w-sm text-sm leading-7 text-[#626A73]"
+                        >
+                            Create your NepChat account and stay connected
+                            with friends, family, classmates, teams, and
+                            communities across Nepal.
+                        </p>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         CHAT ILLUSTRATION
+                         ================================================= -->
+
+                    <div class="mt-4 flex justify-center">
+
+                        <svg
+                            viewBox="0 0 480 360"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="w-full max-w-[460px]"
+                            aria-hidden="true"
+                        >
+
+                            <!-- Background circles -->
+
+                            <circle
+                                cx="240"
+                                cy="180"
+                                r="145"
+                                stroke="#E2DED5"
+                                stroke-width="1"
+                                stroke-dasharray="4 5"
+                            />
+
+                            <circle
+                                cx="240"
+                                cy="180"
+                                r="115"
+                                stroke="#E2DED5"
+                                stroke-width="1"
+                                opacity="0.5"
+                            />
+
+
+                            <!-- Main chat window -->
+
+                            <rect
+                                x="105"
+                                y="55"
+                                width="270"
+                                height="220"
+                                rx="10"
+                                fill="white"
+                                stroke="#E2DED5"
+                                stroke-width="1.5"
+                            />
+
+
+                            <!-- Window header -->
+
+                            <rect
+                                x="105"
+                                y="55"
+                                width="270"
+                                height="38"
+                                rx="10"
+                                fill="#171A1F"
+                            />
+
+                            <rect
+                                x="105"
+                                y="83"
+                                width="270"
+                                height="10"
+                                fill="#171A1F"
+                            />
+
+
+                            <!-- Header dots -->
+
+                            <circle
+                                cx="123"
+                                cy="74"
+                                r="4"
+                                fill="#F97316"
+                                opacity="0.8"
+                            />
+
+                            <circle
+                                cx="137"
+                                cy="74"
+                                r="4"
+                                fill="#0F766E"
+                                opacity="0.8"
+                            />
+
+                            <circle
+                                cx="151"
+                                cy="74"
+                                r="4"
+                                fill="#F7F4EE"
+                                opacity="0.4"
+                            />
+
+
+                            <!-- Chat title -->
+
+                            <rect
+                                x="180"
+                                y="70"
+                                width="65"
+                                height="4"
+                                rx="1"
+                                fill="#F7F4EE"
+                                opacity="0.6"
+                            />
+
+                            <rect
+                                x="180"
+                                y="77"
+                                width="45"
+                                height="3"
+                                rx="1"
+                                fill="#626A73"
+                                opacity="0.7"
+                            />
+
+
+                            <!-- Incoming message -->
+
+                            <rect
+                                x="125"
+                                y="115"
+                                width="120"
+                                height="42"
+                                rx="7"
+                                fill="#F7F4EE"
+                            />
+
+                            <rect
+                                x="136"
+                                y="126"
+                                width="72"
+                                height="4"
+                                rx="1"
+                                fill="#626A73"
+                                opacity="0.5"
+                            />
+
+                            <rect
+                                x="136"
+                                y="135"
+                                width="92"
+                                height="4"
+                                rx="1"
+                                fill="#626A73"
+                                opacity="0.35"
+                            />
+
+                            <rect
+                                x="136"
+                                y="144"
+                                width="55"
+                                height="4"
+                                rx="1"
+                                fill="#0F766E"
+                                opacity="0.5"
+                            />
+
+
+                            <!-- Outgoing message -->
+
+                            <rect
+                                x="230"
+                                y="170"
+                                width="125"
+                                height="44"
+                                rx="7"
+                                fill="#F97316"
+                                opacity="0.12"
+                                stroke="#F97316"
+                                stroke-width="1"
+                                stroke-opacity="0.25"
+                            />
+
+                            <rect
+                                x="243"
+                                y="181"
+                                width="75"
+                                height="4"
+                                rx="1"
+                                fill="#F97316"
+                                opacity="0.65"
+                            />
+
+                            <rect
+                                x="243"
+                                y="190"
+                                width="95"
+                                height="4"
+                                rx="1"
+                                fill="#626A73"
+                                opacity="0.4"
+                            />
+
+                            <rect
+                                x="243"
+                                y="199"
+                                width="50"
+                                height="4"
+                                rx="1"
+                                fill="#0F766E"
+                                opacity="0.55"
+                            />
+
+
+                            <!-- Typing indicator -->
+
+                            <rect
+                                x="125"
+                                y="230"
+                                width="60"
+                                height="25"
+                                rx="12"
+                                fill="#F7F4EE"
+                            />
+
+                            <circle
+                                cx="143"
+                                cy="242"
+                                r="3"
+                                fill="#626A73"
+                                opacity="0.5"
+                            />
+
+                            <circle
+                                cx="153"
+                                cy="242"
+                                r="3"
+                                fill="#626A73"
+                                opacity="0.4"
+                            />
+
+                            <circle
+                                cx="163"
+                                cy="242"
+                                r="3"
+                                fill="#F97316"
+                                opacity="0.6"
+                            />
+
+
+                            <!-- Nepal-inspired location marker -->
+
+                            <path
+                                d="M410 110 C397 110 387 120 387 133 C387 149 410 167 410 167 C410 167 433 149 433 133 C433 120 423 110 410 110Z"
+                                fill="#F97316"
+                                opacity="0.10"
+                                stroke="#F97316"
+                                stroke-width="1.5"
+                            />
+
+                            <circle
+                                cx="410"
+                                cy="132"
+                                r="7"
+                                fill="#F97316"
+                                opacity="0.7"
+                            />
+
+
+                            <!-- User icon -->
+
+                            <circle
+                                cx="72"
+                                cy="132"
+                                r="24"
+                                fill="white"
+                                stroke="#E2DED5"
+                                stroke-width="1.5"
+                            />
+
+                            <circle
+                                cx="72"
+                                cy="126"
+                                r="7"
+                                fill="#0F766E"
+                                opacity="0.5"
+                            />
+
+                            <path
+                                d="M59 148 C61 137 66 134 72 134 C78 134 83 137 85 148"
+                                fill="#0F766E"
+                                opacity="0.25"
+                            />
+
+
+                            <!-- Connection line -->
+
+                            <line
+                                x1="96"
+                                y1="140"
+                                x2="125"
+                                y2="140"
+                                stroke="#E2DED5"
+                                stroke-width="1"
+                                stroke-dasharray="4 3"
+                            />
+
+
+                            <!-- Lock -->
+
+                            <rect
+                                x="55"
+                                y="215"
+                                width="35"
+                                height="30"
+                                rx="5"
+                                fill="white"
+                                stroke="#E2DED5"
+                                stroke-width="1.5"
+                            />
+
+                            <path
+                                d="M65 215 V208 C65 201 80 201 80 208 V215"
+                                stroke="#171A1F"
+                                stroke-width="2"
+                            />
+
+                            <circle
+                                cx="72.5"
+                                cy="229"
+                                r="3"
+                                fill="#F97316"
+                            />
+
+
+                            <!-- Network nodes -->
+
+                            <circle
+                                cx="420"
+                                cy="230"
+                                r="7"
+                                fill="#0F766E"
+                                opacity="0.2"
+                                stroke="#0F766E"
+                                stroke-width="1"
+                            />
+
+                            <circle
+                                cx="445"
+                                cy="210"
+                                r="5"
+                                fill="#F97316"
+                                opacity="0.2"
+                                stroke="#F97316"
+                                stroke-width="1"
+                            />
+
+                            <circle
+                                cx="445"
+                                cy="250"
+                                r="5"
+                                fill="#0F766E"
+                                opacity="0.2"
+                                stroke="#0F766E"
+                                stroke-width="1"
+                            />
+
+                            <line
+                                x1="425"
+                                y1="226"
+                                x2="441"
+                                y2="213"
+                                stroke="#E2DED5"
+                                stroke-width="1"
+                            />
+
+                            <line
+                                x1="425"
+                                y1="234"
+                                x2="441"
+                                y2="247"
+                                stroke="#E2DED5"
+                                stroke-width="1"
+                            />
+
+
+                            <!-- Decorative dots -->
+
+                            <circle
+                                cx="75"
+                                cy="80"
+                                r="3"
+                                fill="#F97316"
+                                opacity="0.35"
+                            />
+
+                            <circle
+                                cx="410"
+                                cy="75"
+                                r="3"
+                                fill="#0F766E"
+                                opacity="0.35"
+                            />
+
+                            <circle
+                                cx="390"
+                                cy="290"
+                                r="3"
+                                fill="#F97316"
+                                opacity="0.3"
+                            />
+
+                        </svg>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         NEPAL CONTEXT
+                         ================================================= -->
+
+                    <div class="mt-4 flex flex-wrap justify-center gap-2">
+
+                        <span
+                            class="rounded-full border border-[#E2DED5] bg-white px-3 py-1.5 text-[10px] font-medium text-[#626A73]"
+                        >
+                            Kathmandu
+                        </span>
+
+                        <span
+                            class="rounded-full border border-[#E2DED5] bg-white px-3 py-1.5 text-[10px] font-medium text-[#626A73]"
+                        >
+                            Pokhara
+                        </span>
+
+                        <span
+                            class="rounded-full border border-[#E2DED5] bg-white px-3 py-1.5 text-[10px] font-medium text-[#626A73]"
+                        >
+                            Dharan
+                        </span>
+
+                        <span
+                            class="rounded-full border border-[#E2DED5] bg-white px-3 py-1.5 text-[10px] font-medium text-[#626A73]"
+                        >
+                            Biratnagar
+                        </span>
+
+                        <span
+                            class="rounded-full border border-[#E2DED5] bg-white px-3 py-1.5 text-[10px] font-medium text-[#626A73]"
+                        >
+                            Nepalgunj
+                        </span>
+
+                    </div>
+
                 </div>
 
-                <div class="auth-brand-point">
-                    <span class="auth-brand-point-icon">
-                        ✓
-                    </span>
-                    Content publishing and scheduling
-                </div>
 
-                <div class="auth-brand-point">
-                    <span class="auth-brand-point-icon">
-                        ✓
-                    </span>
-                    Engagement and performance monitoring
+                <!-- =================================================
+                     BOTTOM STATUS
+                     ================================================= -->
+
+                <div
+                    class="relative z-10 border-t border-[#E2DED5] bg-white/60 px-10 py-5 xl:px-14"
+                >
+
+                    <div class="flex items-center gap-3">
+
+                        <div
+                            class="flex h-8 w-8 items-center justify-center rounded-lg bg-[#0F766E]/10"
+                        >
+
+                            <svg
+                                class="h-4 w-4 text-[#0F766E]"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                                viewBox="0 0 24 24"
+                            >
+
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M12 3l7 4v5c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V7l7-4z"
+                                />
+
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M9.5 12l1.7 1.7 3.4-3.4"
+                                />
+
+                            </svg>
+
+                        </div>
+
+
+                        <div>
+
+                            <p
+                                class="font-mono text-[10px] font-semibold uppercase tracking-wider text-[#0F766E]"
+                            >
+                                NepChat Account
+                            </p>
+
+                            <p
+                                class="mt-0.5 text-[11px] text-[#626A73]"
+                            >
+                                Security-focused account registration
+                            </p>
+
+                        </div>
+
+                    </div>
+
                 </div>
 
             </div>
-        </div>
-    </section>
-
-
-    <!-- =====================================================
-         REGISTER PANEL
-    ====================================================== -->
-    <section class="auth-panel">
-
-        <div class="auth-form-wrap">
-
-            <!-- Logo -->
-            <a href="/" class="auth-logo" aria-label="ChatApplication home">
-
-                <span class="auth-logo-mark">
-                    C
-                </span>
-
-                <span>
-                    ChatApplication
-                </span>
-
-            </a>
-
-
-            <!-- Heading -->
-            <h2 class="auth-heading">
-                Create your account
-            </h2>
-
-            <p class="auth-subtitle">
-                Create your account and get started.
-            </p>
-
-
-            <!-- Error -->
-            <div
-                id="registerError"
-                class="alert alert-danger d-none"
-                role="alert"
-            ></div>
-
-
-            <!-- Success -->
-            <div
-                id="registerSuccess"
-                class="alert alert-success d-none"
-                role="alert"
-            ></div>
 
 
             <!-- =================================================
-                 REGISTER FORM
-            ================================================== -->
-            <form id="registerForm" class="auth-form" novalidate>
+                 RIGHT REGISTER PANEL
+                 ================================================= -->
 
-                <!-- FIRST NAME / LAST NAME -->
-                <div class="row g-3">
+            <div
+                class="flex items-center bg-white px-5 py-10 sm:px-8 lg:px-10 xl:px-14"
+            >
 
-                    <!-- First name -->
-                    <div class="col-md-6">
+                <div class="mx-auto w-full max-w-lg">
 
-                        <div class="auth-field">
 
-                            <label
-                                for="firstName"
-                                class="auth-label"
+                    <!-- =================================================
+                         MOBILE LOGO
+                         ================================================= -->
+
+                    <div
+                        class="mb-8 flex items-center gap-3 lg:hidden"
+                    >
+
+                        <a
+                            href="/"
+                            class="flex items-center gap-3"
+                            aria-label="NepChat home"
+                        >
+
+                            <div
+                                class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#171A1F] text-lg font-black text-[#F97316]"
                             >
-                                First name
-                            </label>
+                                N
+                            </div>
 
-                            <div class="auth-input-wrap">
+                            <div>
 
-                                <span class="auth-input-icon">
-                                    👤
-                                </span>
+                                <p
+                                    class="font-bold tracking-tight text-[#171A1F]"
+                                >
+                                    NepChat
+                                </p>
+
+                                <p
+                                    class="font-mono text-[9px] uppercase tracking-[0.25em] text-[#F97316]"
+                                >
+                                    Nepal-first messaging
+                                </p>
+
+                            </div>
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         HEADER
+                         ================================================= -->
+
+                    <div class="mb-8">
+
+                        <p
+                            class="mb-3 font-mono text-[10px] font-semibold uppercase tracking-[0.25em] text-[#F97316]"
+                        >
+                            Join NepChat
+                        </p>
+
+                        <h2
+                            class="text-3xl font-black tracking-tight text-[#171A1F] sm:text-4xl"
+                        >
+                            Create your account.
+                        </h2>
+
+                        <p
+                            class="mt-3 text-sm leading-6 text-[#626A73]"
+                        >
+                            Set up your NepChat account and start connecting
+                            with the people who matter to you.
+                        </p>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         ERROR
+                         ================================================= -->
+
+                    <div
+                        id="errorMessage"
+                        class="mb-6 hidden rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700"
+                    ></div>
+
+
+                    <!-- =================================================
+                         SUCCESS
+                         ================================================= -->
+
+                    <div
+                        id="successMessage"
+                        class="mb-6 hidden rounded-xl border border-green-200 bg-green-50 px-4 py-3 text-sm text-green-700"
+                    ></div>
+
+
+                    <!-- =================================================
+                         REGISTER FORM
+                         ================================================= -->
+
+                    <form
+                        id="registerForm"
+                        class="space-y-5"
+                    >
+
+                        <!-- =================================================
+                             FIRST + LAST NAME
+                             ================================================= -->
+
+                        <div class="grid gap-5 sm:grid-cols-2">
+
+                            <div>
+
+                                <label
+                                    for="firstName"
+                                    class="mb-2 block text-xs font-semibold uppercase tracking-wider text-[#626A73]"
+                                >
+                                    First Name
+                                </label>
 
                                 <input
                                     id="firstName"
                                     name="firstName"
                                     type="text"
-                                    class="form-control auth-input has-icon"
-                                    placeholder="First name"
                                     autocomplete="given-name"
                                     required
+                                    placeholder="First name"
+                                    class="h-12 w-full rounded-xl border border-[#E2DED5] bg-[#F7F4EE]/60 px-4 text-sm text-[#171A1F] outline-none transition placeholder:text-[#626A73]/60 focus:border-[#F97316] focus:bg-white focus:ring-4 focus:ring-[#F97316]/10"
+                                />
+
+                            </div>
+
+
+                            <div>
+
+                                <label
+                                    for="lastName"
+                                    class="mb-2 block text-xs font-semibold uppercase tracking-wider text-[#626A73]"
                                 >
+                                    Last Name
+                                </label>
+
+                                <input
+                                    id="lastName"
+                                    name="lastName"
+                                    type="text"
+                                    autocomplete="family-name"
+                                    required
+                                    placeholder="Last name"
+                                    class="h-12 w-full rounded-xl border border-[#E2DED5] bg-[#F7F4EE]/60 px-4 text-sm text-[#171A1F] outline-none transition placeholder:text-[#626A73]/60 focus:border-[#F97316] focus:bg-white focus:ring-4 focus:ring-[#F97316]/10"
+                                />
 
                             </div>
 
                         </div>
 
-                    </div>
 
+                        <!-- =================================================
+                             USERNAME
+                             ================================================= -->
 
-                    <!-- Last name -->
-                    <div class="col-md-6">
-
-                        <div class="auth-field">
+                        <div>
 
                             <label
-                                for="lastName"
-                                class="auth-label"
+                                for="username"
+                                class="mb-2 block text-xs font-semibold uppercase tracking-wider text-[#626A73]"
                             >
-                                Last name
+                                Username
                             </label>
 
-                            <input
-                                id="lastName"
-                                name="lastName"
-                                type="text"
-                                class="form-control auth-input"
-                                placeholder="Last name"
-                                autocomplete="family-name"
-                                required
-                            >
+                            <div class="relative">
+
+                                <span
+                                    class="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 font-mono text-sm text-[#626A73]"
+                                >
+                                    @
+                                </span>
+
+                                <input
+                                    id="username"
+                                    name="username"
+                                    type="text"
+                                    autocomplete="username"
+                                    required
+                                    minlength="3"
+                                    placeholder="Choose your username"
+                                    class="h-12 w-full rounded-xl border border-[#E2DED5] bg-[#F7F4EE]/60 pl-10 pr-4 text-sm text-[#171A1F] outline-none transition placeholder:text-[#626A73]/60 focus:border-[#F97316] focus:bg-white focus:ring-4 focus:ring-[#F97316]/10"
+                                />
+
+                            </div>
 
                         </div>
 
-                    </div>
 
-                </div>
+                        <!-- =================================================
+                             EMAIL
+                             ================================================= -->
+
+                        <div>
+
+                            <label
+                                for="email"
+                                class="mb-2 block text-xs font-semibold uppercase tracking-wider text-[#626A73]"
+                            >
+                                Email Address
+                            </label>
+
+                            <input
+                                id="email"
+                                name="email"
+                                type="email"
+                                autocomplete="email"
+                                required
+                                placeholder="you@example.com"
+                                class="h-12 w-full rounded-xl border border-[#E2DED5] bg-[#F7F4EE]/60 px-4 text-sm text-[#171A1F] outline-none transition placeholder:text-[#626A73]/60 focus:border-[#F97316] focus:bg-white focus:ring-4 focus:ring-[#F97316]/10"
+                            />
+
+                        </div>
 
 
-                <!-- USERNAME -->
-                <div class="auth-field">
+                        <!-- =================================================
+                             PASSWORD
+                             ================================================= -->
 
-                    <label
-                        for="username"
-                        class="auth-label"
-                    >
-                        Username
-                    </label>
+                        <div>
 
-                    <div class="auth-input-wrap">
+                            <label
+                                for="password"
+                                class="mb-2 block text-xs font-semibold uppercase tracking-wider text-[#626A73]"
+                            >
+                                Password
+                            </label>
 
-                        <span class="auth-input-icon">
-                            👤
-                        </span>
+                            <div class="relative">
 
-                        <input
-                            id="username"
-                            name="username"
-                            type="text"
-                            class="form-control auth-input has-icon"
-                            placeholder="Choose a username"
-                            autocomplete="username"
-                            required
+                                <input
+                                    id="password"
+                                    name="password"
+                                    type="password"
+                                    autocomplete="new-password"
+                                    required
+                                    minlength="8"
+                                    placeholder="Create a strong password"
+                                    class="h-12 w-full rounded-xl border border-[#E2DED5] bg-[#F7F4EE]/60 px-4 pr-12 text-sm text-[#171A1F] outline-none transition placeholder:text-[#626A73]/60 focus:border-[#F97316] focus:bg-white focus:ring-4 focus:ring-[#F97316]/10"
+                                />
+
+                                <button
+                                    type="button"
+                                    data-password-toggle="password"
+                                    class="absolute right-3 top-1/2 -translate-y-1/2 rounded-lg p-2 text-[#626A73] transition hover:bg-[#E2DED5]/50 hover:text-[#171A1F]"
+                                    aria-label="Show password"
+                                >
+
+                                    <svg
+                                        class="h-5 w-5"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.8"
+                                        viewBox="0 0 24 24"
+                                    >
+
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6z"
+                                        />
+
+                                        <circle
+                                            cx="12"
+                                            cy="12"
+                                            r="2.5"
+                                        />
+
+                                    </svg>
+
+                                </button>
+
+                            </div>
+
+                            <p class="mt-2 text-[11px] text-[#626A73]">
+                                Use at least 8 characters.
+                            </p>
+
+                        </div>
+
+
+                        <!-- =================================================
+                             CONFIRM PASSWORD
+                             ================================================= -->
+
+                        <div>
+
+                            <label
+                                for="confirmPassword"
+                                class="mb-2 block text-xs font-semibold uppercase tracking-wider text-[#626A73]"
+                            >
+                                Confirm Password
+                            </label>
+
+                            <div class="relative">
+
+                                <input
+                                    id="confirmPassword"
+                                    name="confirmPassword"
+                                    type="password"
+                                    autocomplete="new-password"
+                                    required
+                                    placeholder="Repeat your password"
+                                    class="h-12 w-full rounded-xl border border-[#E2DED5] bg-[#F7F4EE]/60 px-4 pr-12 text-sm text-[#171A1F] outline-none transition placeholder:text-[#626A73]/60 focus:border-[#F97316] focus:bg-white focus:ring-4 focus:ring-[#F97316]/10"
+                                />
+
+                                <button
+                                    type="button"
+                                    data-password-toggle="confirmPassword"
+                                    class="absolute right-3 top-1/2 -translate-y-1/2 rounded-lg p-2 text-[#626A73] transition hover:bg-[#E2DED5]/50 hover:text-[#171A1F]"
+                                    aria-label="Show password"
+                                >
+
+                                    <svg
+                                        class="h-5 w-5"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.8"
+                                        viewBox="0 0 24 24"
+                                    >
+
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6z"
+                                        />
+
+                                        <circle
+                                            cx="12"
+                                            cy="12"
+                                            r="2.5"
+                                        />
+
+                                    </svg>
+
+                                </button>
+
+                            </div>
+
+                            <p
+                                id="passwordMatch"
+                                class="mt-2 hidden text-[11px]"
+                            ></p>
+
+                        </div>
+
+
+                        <!-- =================================================
+                             TERMS
+                             ================================================= -->
+
+                        <div
+                            class="flex items-start gap-3 rounded-xl border border-[#E2DED5] bg-[#F7F4EE]/50 p-4"
                         >
 
-                    </div>
+                            <input
+                                id="terms"
+                                name="terms"
+                                type="checkbox"
+                                required
+                                class="mt-0.5 h-4 w-4 rounded border-[#E2DED5] text-[#F97316] focus:ring-[#F97316]"
+                            />
 
-                </div>
+                            <label
+                                for="terms"
+                                class="text-xs leading-5 text-[#626A73]"
+                            >
+                                I agree to use NepChat responsibly and
+                                follow the application's terms of use.
+                            </label>
 
-
-                <!-- EMAIL -->
-                <div class="auth-field">
-
-                    <label
-                        for="email"
-                        class="auth-label"
-                    >
-                        Email address
-                    </label>
-
-                    <div class="auth-input-wrap">
-
-                        <span class="auth-input-icon">
-                            ✉
-                        </span>
-
-                        <input
-                            id="email"
-                            name="email"
-                            type="email"
-                            class="form-control auth-input has-icon"
-                            placeholder="you@example.com"
-                            autocomplete="email"
-                            required
-                        >
-
-                    </div>
-
-                </div>
+                        </div>
 
 
-                <!-- PASSWORD -->
-                <div class="auth-field">
-
-                    <label
-                        for="password"
-                        class="auth-label"
-                    >
-                        Password
-                    </label>
-
-                    <div class="auth-input-wrap">
-
-                        <span class="auth-input-icon">
-                            🔒
-                        </span>
-
-                        <input
-                            id="password"
-                            name="password"
-                            type="password"
-                            class="form-control auth-input has-icon has-action"
-                            placeholder="Create a password"
-                            autocomplete="new-password"
-                            required
-                        >
+                        <!-- =================================================
+                             SUBMIT
+                             ================================================= -->
 
                         <button
-                            type="button"
-                            id="togglePassword"
-                            class="auth-input-action"
-                            aria-label="Show password"
+                            id="registerButton"
+                            type="submit"
+                            class="flex h-12 w-full items-center justify-center gap-3 rounded-xl bg-[#171A1F] px-5 text-sm font-bold text-white shadow-lg shadow-[#171A1F]/10 transition hover:bg-[#F97316] hover:shadow-[#F97316]/20 focus:outline-none focus:ring-4 focus:ring-[#F97316]/20 disabled:cursor-not-allowed disabled:opacity-60"
                         >
-                            👁
+
+                            <span id="registerButtonText">
+                                Create NepChat Account
+                            </span>
+
+                            <svg
+                                id="registerSpinner"
+                                class="hidden h-5 w-5 animate-spin"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                            >
+
+                                <circle
+                                    class="opacity-25"
+                                    cx="12"
+                                    cy="12"
+                                    r="10"
+                                    stroke="currentColor"
+                                    stroke-width="4"
+                                ></circle>
+
+                                <path
+                                    class="opacity-75"
+                                    fill="currentColor"
+                                    d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                                ></path>
+
+                            </svg>
+
                         </button>
+
+                    </form>
+
+
+                    <!-- =================================================
+                         LOGIN
+                         ================================================= -->
+
+                    <div class="mt-7 text-center">
+
+                        <p class="text-sm text-[#626A73]">
+
+                            Already part of NepChat?
+
+                            <a
+                                href="/login"
+                                class="font-semibold text-[#F97316] transition hover:text-[#0F766E]"
+                            >
+                                Sign in
+                            </a>
+
+                        </p>
 
                     </div>
 
-                </div>
 
+                    <!-- =================================================
+                         SECURITY NOTE
+                         ================================================= -->
 
-                <!-- CONFIRM PASSWORD -->
-                <div class="auth-field">
-
-                    <label
-                        for="confirmPassword"
-                        class="auth-label"
+                    <div
+                        class="mt-8 flex items-center justify-center gap-2 text-[10px] font-medium uppercase tracking-wider text-[#626A73]"
                     >
-                        Confirm password
-                    </label>
 
-                    <div class="auth-input-wrap">
-
-                        <span class="auth-input-icon">
-                            🔒
-                        </span>
-
-                        <input
-                            id="confirmPassword"
-                            name="confirmPassword"
-                            type="password"
-                            class="form-control auth-input has-icon has-action"
-                            placeholder="Confirm your password"
-                            autocomplete="new-password"
-                            required
+                        <svg
+                            class="h-4 w-4 text-[#0F766E]"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            viewBox="0 0 24 24"
                         >
 
-                        <button
-                            type="button"
-                            id="toggleConfirmPassword"
-                            class="auth-input-action"
-                            aria-label="Show password"
-                        >
-                            👁
-                        </button>
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M12 3l7 4v5c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V7l7-4z"
+                            />
+
+                        </svg>
+
+                        Security-focused account registration
 
                     </div>
 
                 </div>
 
-
-                <!-- PASSWORD MATCH MESSAGE -->
-                <div
-                    id="passwordMatch"
-                    class="password-match d-none"
-                ></div>
-
-
-                <!-- SUBMIT -->
-                <button
-                    type="submit"
-                    id="registerButton"
-                    class="btn auth-btn auth-btn-primary auth-btn-full"
-                >
-
-                    <span
-                        id="registerButtonSpinner"
-                        class="spinner-border spinner-border-sm d-none"
-                        aria-hidden="true"
-                    ></span>
-
-                    <span id="registerButtonText">
-                        Create account
-                    </span>
-
-                </button>
-
-            </form>
-
-
-            <!-- LOGIN LINK -->
-            <p class="auth-login-text">
-
-                Already have an account?
-
-                <a
-                    href="/login"
-                    class="auth-link"
-                >
-                    Sign in
-                </a>
-
-            </p>
+            </div>
 
         </div>
 
-    </section>
+    </div>
 
-</div>
+</section>
 
 
 <!-- =========================================================
-     REGISTER PAGE JAVASCRIPT
-========================================================== -->
+     REGISTER JAVASCRIPT
+     ========================================================= -->
+
 <script>
-(function () {
+document.addEventListener("DOMContentLoaded", () => {
 
-    const form = document.getElementById("registerForm");
+    const form =
+        document.getElementById("registerForm");
 
-    const firstName = document.getElementById("firstName");
-    const lastName = document.getElementById("lastName");
-    const username = document.getElementById("username");
-    const email = document.getElementById("email");
-    const password = document.getElementById("password");
+    const password =
+        document.getElementById("password");
+
     const confirmPassword =
         document.getElementById("confirmPassword");
+
+    const passwordMatch =
+        document.getElementById("passwordMatch");
+
+    const errorMessage =
+        document.getElementById("errorMessage");
+
+    const successMessage =
+        document.getElementById("successMessage");
 
     const registerButton =
         document.getElementById("registerButton");
@@ -384,110 +1139,95 @@
     const registerButtonText =
         document.getElementById("registerButtonText");
 
-    const registerButtonSpinner =
-        document.getElementById("registerButtonSpinner");
-
-    const errorBox =
-        document.getElementById("registerError");
-
-    const successBox =
-        document.getElementById("registerSuccess");
-
-    const passwordMatch =
-        document.getElementById("passwordMatch");
+    const registerSpinner =
+        document.getElementById("registerSpinner");
 
 
-    /* =====================================================
-       SHOW / HIDE PASSWORD
-    ====================================================== */
-
-    function togglePasswordVisibility(input, button) {
-
-        if (input.type === "password") {
-
-            input.type = "text";
-            button.textContent = "🙈";
-            button.setAttribute(
-                "aria-label",
-                "Hide password"
-            );
-
-        } else {
-
-            input.type = "password";
-            button.textContent = "👁";
-            button.setAttribute(
-                "aria-label",
-                "Show password"
-            );
-        }
-    }
-
+    /* =========================================================
+       PASSWORD VISIBILITY
+       ========================================================= */
 
     document
-        .getElementById("togglePassword")
-        .addEventListener("click", function () {
+        .querySelectorAll("[data-password-toggle]")
+        .forEach((button) => {
 
-            togglePasswordVisibility(
-                password,
-                this
-            );
+            button.addEventListener("click", () => {
+
+                const targetId =
+                    button.getAttribute(
+                        "data-password-toggle"
+                    );
+
+                const input =
+                    document.getElementById(targetId);
+
+                if (!input) return;
+
+
+                if (input.type === "password") {
+
+                    input.type = "text";
+
+                    button.setAttribute(
+                        "aria-label",
+                        "Hide password"
+                    );
+
+                } else {
+
+                    input.type = "password";
+
+                    button.setAttribute(
+                        "aria-label",
+                        "Show password"
+                    );
+
+                }
+
+            });
 
         });
 
 
-    document
-        .getElementById("toggleConfirmPassword")
-        .addEventListener("click", function () {
-
-            togglePasswordVisibility(
-                confirmPassword,
-                this
-            );
-
-        });
-
-
-    /* =====================================================
+    /* =========================================================
        PASSWORD MATCH
-    ====================================================== */
+       ========================================================= */
 
     function checkPasswordMatch() {
 
         if (!confirmPassword.value) {
 
-            passwordMatch.classList.add("d-none");
+            passwordMatch.classList.add("hidden");
+
             return;
+
         }
 
-        passwordMatch.classList.remove("d-none");
 
-        if (password.value === confirmPassword.value) {
+        passwordMatch.classList.remove("hidden");
+
+
+        if (
+            password.value ===
+            confirmPassword.value
+        ) {
 
             passwordMatch.textContent =
-                "✓ Passwords match.";
+                "Passwords match.";
 
-            passwordMatch.classList.remove(
-                "password-mismatch"
-            );
-
-            passwordMatch.classList.add(
-                "password-match-success"
-            );
+            passwordMatch.className =
+                "mt-2 text-[11px] text-[#0F766E]";
 
         } else {
 
             passwordMatch.textContent =
                 "Passwords do not match.";
 
-            passwordMatch.classList.remove(
-                "password-match-success"
-            );
+            passwordMatch.className =
+                "mt-2 text-[11px] text-red-600";
 
-            passwordMatch.classList.add(
-                "password-mismatch"
-            );
         }
+
     }
 
 
@@ -502,237 +1242,269 @@
     );
 
 
-    /* =====================================================
-       ERROR HANDLING
-    ====================================================== */
-
-    function showError(message) {
-
-        errorBox.textContent = message;
-
-        errorBox.classList.remove("d-none");
-
-        successBox.classList.add("d-none");
-    }
-
-
-    function showSuccess(message) {
-
-        successBox.textContent = message;
-
-        successBox.classList.remove("d-none");
-
-        errorBox.classList.add("d-none");
-    }
-
-
-    function clearMessages() {
-
-        errorBox.textContent = "";
-
-        errorBox.classList.add("d-none");
-
-        successBox.textContent = "";
-
-        successBox.classList.add("d-none");
-    }
-
-
-    /* =====================================================
+    /* =========================================================
        LOADING STATE
-    ====================================================== */
+       ========================================================= */
 
     function setLoading(loading) {
 
-        registerButton.disabled = loading;
+        registerButton.disabled =
+            loading;
 
-        registerButtonSpinner.classList.toggle(
-            "d-none",
-            !loading
-        );
 
-        registerButtonText.textContent =
-            loading
-                ? "Creating account..."
-                : "Create account";
+        if (loading) {
 
-        const inputs =
-            form.querySelectorAll("input, button");
+            registerButtonText.textContent =
+                "Creating your account...";
 
-        inputs.forEach(function (element) {
+            registerSpinner.classList.remove(
+                "hidden"
+            );
 
-            if (
-                element !== registerButton &&
-                element.type !== "submit"
-            ) {
-                element.disabled = loading;
-            }
+        } else {
 
-        });
+            registerButtonText.textContent =
+                "Create NepChat Account";
+
+            registerSpinner.classList.add(
+                "hidden"
+            );
+
+        }
+
     }
 
 
-    /* =====================================================
+    /* =========================================================
        FORM SUBMISSION
-    ====================================================== */
+       ========================================================= */
 
     form.addEventListener(
         "submit",
-        async function (event) {
+        async (event) => {
 
             event.preventDefault();
 
-            clearMessages();
 
-            /* Browser validation */
+            errorMessage.classList.add(
+                "hidden"
+            );
+
+            successMessage.classList.add(
+                "hidden"
+            );
+
+
+            /* =============================================
+               HTML VALIDATION
+               ============================================= */
+
             if (!form.checkValidity()) {
 
-                form.classList.add("was-validated");
-
-                showError(
-                    "Please complete all required fields."
-                );
+                form.reportValidity();
 
                 return;
+
             }
 
 
-            /* Password confirmation */
+            /* =============================================
+               PASSWORD MATCH
+               ============================================= */
+
             if (
                 password.value !==
                 confirmPassword.value
             ) {
 
-                showError(
-                    "Passwords do not match."
+                errorMessage.textContent =
+                    "Passwords do not match.";
+
+                errorMessage.classList.remove(
+                    "hidden"
                 );
 
+                confirmPassword.focus();
+
                 return;
+
             }
+
+
+            /* =============================================
+               PASSWORD LENGTH
+               ============================================= */
+
+            if (
+                password.value.length < 8
+            ) {
+
+                errorMessage.textContent =
+                    "Password must contain at least 8 characters.";
+
+                errorMessage.classList.remove(
+                    "hidden"
+                );
+
+                password.focus();
+
+                return;
+
+            }
+
+
+            /* =============================================
+               COLLECT FORM DATA
+               ============================================= */
+
+            const data = {
+
+                firstName:
+                    document
+                        .getElementById("firstName")
+                        .value
+                        .trim(),
+
+                lastName:
+                    document
+                        .getElementById("lastName")
+                        .value
+                        .trim(),
+
+                username:
+                    document
+                        .getElementById("username")
+                        .value
+                        .trim(),
+
+                email:
+                    document
+                        .getElementById("email")
+                        .value
+                        .trim(),
+
+                password:
+                    password.value
+
+            };
 
 
             setLoading(true);
 
 
+            /* =============================================
+               REGISTER API
+               ============================================= */
+
             try {
 
-                /*
-                 * IMPORTANT:
-                 *
-                 * Do NOT send:
-                 *
-                 * role
-                 * status
-                 * emailVerified
-                 *
-                 * These must remain
-                 * backend-controlled.
-                 */
+                const response =
+                    await fetch(
+                        "/api/v1/auth/register",
+                        {
+                            method: "POST",
 
-                const response = await fetch(
-                    "/api/v1/auth/register",
-                    {
-                        method: "POST",
+                            headers: {
+                                "Content-Type":
+                                    "application/json"
+                            },
 
-                        headers: {
-                            "Content-Type":
-                                "application/json",
-
-                            "Accept":
-                                "application/json"
-                        },
-
-                        body: JSON.stringify({
-
-                            firstName:
-                                firstName.value.trim(),
-
-                            lastName:
-                                lastName.value.trim(),
-
-                            username:
-                                username.value.trim(),
-
-                            email:
-                                email.value.trim(),
-
-                            password:
-                                password.value
-
-                        })
-                    }
-                );
+                            body:
+                                JSON.stringify(data)
+                        }
+                    );
 
 
-                /* Parse API response */
                 let result = {};
+
 
                 try {
 
-                    result = await response.json();
+                    result =
+                        await response.json();
 
-                } catch (_) {
+                } catch {
 
                     result = {};
 
                 }
 
 
-                /* API error */
+                /* =========================================
+                   REGISTRATION FAILURE
+                   ========================================= */
+
                 if (!response.ok) {
 
                     throw new Error(
                         result.message ||
                         result.error ||
-                        "Unable to create your account."
+                        "Registration failed. Please try again."
                     );
+
                 }
 
 
-                /* Success */
-                showSuccess(
+                /* =========================================
+                   SUCCESS
+                   ========================================= */
+
+                successMessage.textContent =
                     result.message ||
-                    "Account created successfully."
+                    "Your NepChat account was created successfully. Please verify your email.";
+
+                successMessage.classList.remove(
+                    "hidden"
                 );
 
 
-                /*
-                 * Redirect to email verification.
-                 *
-                 * Email is encoded before being
-                 * placed into the URL.
-                 */
+                form.reset();
 
-                const encodedEmail =
-                    encodeURIComponent(
-                        email.value.trim()
-                    );
+                passwordMatch.classList.add(
+                    "hidden"
+                );
 
 
-                setTimeout(function () {
+                /* =========================================
+                   REDIRECT TO EMAIL VERIFICATION
+                   ========================================= */
+
+                setTimeout(() => {
 
                     window.location.href =
                         "/verify-email?email=" +
-                        encodedEmail;
+                        encodeURIComponent(
+                            data.email
+                        );
 
-                }, 700);
+                }, 800);
 
 
             } catch (error) {
 
-                showError(
-                    error instanceof Error
-                        ? error.message
-                        : "Unable to create your account."
+                console.error(
+                    "Registration error:",
+                    error
                 );
 
+
+                errorMessage.textContent =
+                    error.message ||
+                    "Something went wrong. Please try again.";
+
+                errorMessage.classList.remove(
+                    "hidden"
+                );
+
+
                 setLoading(false);
+
             }
 
         }
     );
 
-})();
+});
 </script>
 
 {{ end }}

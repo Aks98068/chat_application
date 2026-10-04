@@ -1,57 +1,253 @@
 {{ define "navbar" }}
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
+<nav
+    id="main-navbar"
+    class="fixed inset-x-0 top-0 z-50 border-b border-transparent bg-[#F7F4EE]/90 backdrop-blur-md transition-all duration-300"
+>
+    <div
+        class="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8"
+    >
 
-        <a class="navbar-brand fw-bold" href="/">
-            ChatApplication
+        <!-- ========================= LOGO ========================= -->
+        <a
+            href="/"
+            class="group flex shrink-0 items-center"
+            aria-label="{{ .AppName }} Home"
+        >
+            <div class="flex items-center gap-2.5">
+
+                <!-- Logo Mark -->
+                <div
+                    class="flex h-9 w-9 items-center justify-center rounded-lg bg-slate-950 text-base font-extrabold tracking-tight text-white shadow-sm transition-transform duration-200 group-hover:-translate-y-0.5"
+                >
+                    N
+                </div>
+
+                <!-- App Name -->
+                <div class="hidden sm:block">
+                    <span
+                        class="text-[15px] font-bold tracking-tight text-slate-900"
+                    >
+                        NepChat
+                    </span>
+
+                    <span
+                        class="ml-1.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-orange-500"
+                    >
+                        Messaging
+                    </span>
+                </div>
+
+            </div>
         </a>
 
-        <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#mainNavbar"
-            aria-controls="mainNavbar"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-        >
-            <span class="navbar-toggler-icon"></span>
-        </button>
 
-        <div
-            class="collapse navbar-collapse"
-            id="mainNavbar"
-        >
+        <!-- ========================= DESKTOP NAVIGATION ========================= -->
+        <div class="hidden items-center gap-1 lg:flex">
 
-            <ul class="navbar-nav ms-auto align-items-lg-center">
+            <!-- Home -->
+            <a
+                href="/"
+                data-nav-link
+                class="relative rounded-sm px-3 py-2 text-[13px] font-medium text-slate-600 transition-colors duration-200 hover:text-slate-950"
+            >
+                Home
 
-                <li class="nav-item">
-                    <a class="nav-link" href="/">
-                        Home
-                    </a>
-                </li>
+                <span
+                    data-nav-indicator
+                    class="absolute bottom-0 left-3 right-3 hidden h-0.5 rounded-full bg-orange-500"
+                ></span>
+            </a>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="/login">
-                        Login
-                    </a>
-                </li>
 
-                <li class="nav-item">
-                    <a
-                        class="btn btn-primary ms-lg-2 mt-2 mt-lg-0"
-                        href="/register"
-                    >
-                        Register
-                    </a>
-                </li>
+            <!-- Features -->
+            <a
+                href="/#features"
+                data-nav-link
+                class="relative rounded-sm px-3 py-2 text-[13px] font-medium text-slate-600 transition-colors duration-200 hover:text-slate-950"
+            >
+                Features
 
-            </ul>
+                <span
+                    data-nav-indicator
+                    class="absolute bottom-0 left-3 right-3 hidden h-0.5 rounded-full bg-orange-500"
+                ></span>
+            </a>
+
+
+            <!-- How It Works -->
+            <a
+                href="/#how-it-works"
+                data-nav-link
+                class="relative rounded-sm px-3 py-2 text-[13px] font-medium text-slate-600 transition-colors duration-200 hover:text-slate-950"
+            >
+                How It Works
+
+                <span
+                    data-nav-indicator
+                    class="absolute bottom-0 left-3 right-3 hidden h-0.5 rounded-full bg-orange-500"
+                ></span>
+            </a>
 
         </div>
 
+
+        <!-- ========================= DESKTOP ACTIONS ========================= -->
+        <div class="hidden items-center gap-3 lg:flex">
+
+            <a
+                href="/login"
+                class="px-3 py-2 text-[13px] font-semibold text-slate-700 transition-colors duration-200 hover:text-slate-950"
+            >
+                Sign In
+            </a>
+
+            <a
+                href="/register"
+                class="inline-flex items-center justify-center rounded-lg bg-slate-950 px-4 py-2 text-[13px] font-semibold text-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-slate-800 hover:shadow-md"
+            >
+                Get Started
+            </a>
+
+        </div>
+
+
+        <!-- ========================= MOBILE MENU BUTTON ========================= -->
+        <button
+            id="mobile-menu-button"
+            type="button"
+            class="inline-flex items-center justify-center rounded-lg p-2 text-slate-800 transition-colors hover:bg-slate-200/70 lg:hidden"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+        >
+
+            <!-- Menu Icon -->
+            <svg
+                id="menu-open-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4 6h16M4 12h16M4 18h16"
+                />
+            </svg>
+
+
+            <!-- Close Icon -->
+            <svg
+                id="menu-close-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                class="hidden h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                />
+            </svg>
+
+        </button>
+
     </div>
+
+
+    <!-- ========================= MOBILE MENU ========================= -->
+    <div
+        id="mobile-menu"
+        class="hidden border-t border-slate-200 bg-[#F7F4EE]"
+    >
+        <div class="mx-auto max-w-7xl px-6 py-4 lg:px-8">
+
+            <div class="flex flex-col gap-1">
+
+                <!-- Mobile Brand -->
+                <div class="mb-2 flex items-center gap-2 border-b border-slate-200 pb-3 sm:hidden">
+
+                    <div
+                        class="flex h-8 w-8 items-center justify-center rounded-lg bg-slate-950 text-sm font-extrabold text-white"
+                    >
+                        N
+                    </div>
+
+                    <div>
+                        <span class="text-sm font-bold text-slate-900">
+                            NepChat
+                        </span>
+
+                        <span class="ml-1 text-[9px] font-semibold uppercase tracking-wider text-orange-500">
+                            Messaging
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <!-- Home -->
+                <a
+                    href="/"
+                    data-mobile-nav-link
+                    class="rounded-lg px-3 py-3 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-200/60 hover:text-slate-950"
+                >
+                    Home
+                </a>
+
+
+                <!-- Features -->
+                <a
+                    href="/#features"
+                    data-mobile-nav-link
+                    class="rounded-lg px-3 py-3 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-200/60 hover:text-slate-950"
+                >
+                    Features
+                </a>
+
+
+                <!-- How It Works -->
+                <a
+                    href="/#how-it-works"
+                    data-mobile-nav-link
+                    class="rounded-lg px-3 py-3 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-200/60 hover:text-slate-950"
+                >
+                    How It Works
+                </a>
+
+
+                <div class="my-2 border-t border-slate-200"></div>
+
+
+                <!-- Sign In -->
+                <a
+                    href="/login"
+                    class="rounded-lg px-3 py-3 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-200/60 hover:text-slate-950"
+                >
+                    Sign In
+                </a>
+
+
+                <!-- Create Account -->
+                <a
+                    href="/register"
+                    class="mt-1 rounded-lg bg-slate-950 px-3 py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-slate-800"
+                >
+                    Create Account
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+
 </nav>
 
 {{ end }}

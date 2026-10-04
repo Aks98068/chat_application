@@ -1,270 +1,1986 @@
 {{ define "content" }}
 
-<!-- ========================= HERO ========================= -->
-<section class="home-hero">
-    <div class="hero-blob hero-blob-1"></div>
-    <div class="hero-blob hero-blob-2"></div>
+<!-- =========================================================
+     NEPCHAT HOME
+     Nepal-focused messaging platform
+     ========================================================= -->
 
-    <div class="container position-relative">
-        <div class="row align-items-center min-vh-75 gy-5">
+<div class="bg-[#F7F4EE] text-[#171A1F]">
 
-            <div class="col-lg-6">
-                <span class="home-badge hero-in hero-in-1">
-                    <span class="badge-dot"></span>
-                    Secure by design
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <section class="relative overflow-hidden pt-20 sm:pt-24 lg:pt-28">
+
+        <!-- Background decoration -->
+        <div class="pointer-events-none absolute inset-0 overflow-hidden">
+
+            <div
+                class="absolute -right-48 top-16 h-[30rem] w-[30rem] rounded-full bg-[#F97316]/10 blur-3xl"
+            ></div>
+
+            <div
+                class="absolute -left-48 bottom-0 h-[30rem] w-[30rem] rounded-full bg-[#0F766E]/8 blur-3xl"
+            ></div>
+
+            <!-- Subtle Nepal-inspired mountain line -->
+            <div class="absolute bottom-0 left-0 right-0 opacity-[0.035]">
+
+                <svg
+                    viewBox="0 0 1440 240"
+                    class="h-auto w-full"
+                    preserveAspectRatio="none"
+                    aria-hidden="true"
+                >
+                    <path
+                        fill="currentColor"
+                        d="M0 210 170 125 260 175 420 55 500 135 620 25 735 145 850 75 970 155 1080 40 1190 145 1300 85 1440 180V240H0Z"
+                    />
+                </svg>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="relative mx-auto max-w-7xl px-5 pb-20 sm:px-8 lg:px-12 lg:pb-28"
+        >
+
+            <div
+                class="grid items-center gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20"
+            >
+
+
+                <!-- =================================================
+                     HERO COPY
+                     ================================================= -->
+
+                <div class="max-w-2xl">
+
+                    <!-- Nepal badge -->
+                    <div
+                        class="inline-flex items-center gap-2 rounded-full border border-[#E2DED5] bg-white px-4 py-2 text-sm font-semibold text-[#626A73] shadow-sm"
+                    >
+
+                        <span
+                            class="flex h-6 w-6 items-center justify-center rounded-full bg-[#171A1F] text-xs font-black text-white"
+                        >
+                            N
+                        </span>
+
+                        <span class="text-[#171A1F]">
+                            NepChat
+                        </span>
+
+                        <span class="h-1.5 w-1.5 rounded-full bg-[#F97316]"></span>
+
+                        <span>
+                            Built for Nepal
+                        </span>
+
+                    </div>
+
+
+                    <!-- Main heading -->
+                    <h1
+                        class="mt-7 text-5xl font-black leading-[0.98] tracking-[-0.045em] text-[#171A1F] sm:text-6xl lg:text-7xl xl:text-[5.15rem]"
+                    >
+
+                        Stay close,
+
+                        <span class="relative inline-block">
+
+                            wherever
+                            
+                            <span
+                                class="absolute -bottom-1 left-0 h-2 w-full rounded-full bg-[#F97316]/25"
+                            ></span>
+
+                        </span>
+
+                        <br>
+
+                        Nepal is home.
+
+                    </h1>
+
+
+                    <!-- Description -->
+                    <p
+                        class="mt-7 max-w-xl text-lg leading-8 text-[#626A73] sm:text-xl"
+                    >
+                        NepChat gives friends, families, classmates and
+                        communities a simple place to talk and stay connected 
+                        from Kathmandu to Pokhara, and from home to anywhere
+                        in the world.
+                    </p>
+
+
+                    <!-- CTA -->
+                    <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+
+                        <a
+                            href="/register"
+                            class="inline-flex items-center justify-center gap-2 rounded-xl bg-[#171A1F] px-7 py-3.5 text-base font-bold text-white shadow-xl shadow-[#171A1F]/15 transition duration-200 hover:-translate-y-0.5 hover:bg-[#2B3037]"
+                        >
+                            Join NepChat
+
+                            <svg
+                                class="h-5 w-5"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path d="M5 12h14"></path>
+                                <path d="m13 6 6 6-6 6"></path>
+                            </svg>
+
+                        </a>
+
+
+                        <a
+                            href="/login"
+                            class="inline-flex items-center justify-center rounded-xl border border-[#D8D3CA] bg-white px-7 py-3.5 text-base font-bold text-[#171A1F] transition duration-200 hover:-translate-y-0.5 hover:border-[#171A1F] hover:shadow-lg"
+                        >
+                            Sign in
+                        </a>
+
+                    </div>
+
+
+                    <!-- Trust row -->
+                    <div
+                        class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-[#626A73]"
+                    >
+
+                        <div class="flex items-center gap-2">
+
+                            <span
+                                class="flex h-5 w-5 items-center justify-center rounded-full bg-[#0F766E]/10 text-xs font-bold text-[#0F766E]"
+                            >
+                                ✓
+                            </span>
+
+                            Simple conversations
+
+                        </div>
+
+
+                        <div class="flex items-center gap-2">
+
+                            <span
+                                class="flex h-5 w-5 items-center justify-center rounded-full bg-[#0F766E]/10 text-xs font-bold text-[#0F766E]"
+                            >
+                                ✓
+                            </span>
+
+                            Protected accounts
+
+                        </div>
+
+
+                        <div class="flex items-center gap-2">
+
+                            <span
+                                class="flex h-5 w-5 items-center justify-center rounded-full bg-[#0F766E]/10 text-xs font-bold text-[#0F766E]"
+                            >
+                                ✓
+                            </span>
+
+                            Made for everyday life
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     REALISTIC NEPCHAT PRODUCT PREVIEW
+                     ================================================= -->
+
+                <div class="relative">
+
+                    <div
+                        class="absolute -inset-8 rounded-[3rem] bg-[#F97316]/8 blur-3xl"
+                    ></div>
+
+
+                    <div
+                        class="relative overflow-hidden rounded-[1.75rem] border border-[#DCD7CE] bg-white shadow-[0_30px_80px_rgba(23,26,31,0.14)]"
+                    >
+
+                        <!-- Browser header -->
+                        <div
+                            class="flex items-center justify-between border-b border-[#E8E4DD] bg-[#FCFBF8] px-5 py-3"
+                        >
+
+                            <div class="flex items-center gap-2">
+
+                                <span class="h-2.5 w-2.5 rounded-full bg-[#D8D3CA]"></span>
+                                <span class="h-2.5 w-2.5 rounded-full bg-[#D8D3CA]"></span>
+                                <span class="h-2.5 w-2.5 rounded-full bg-[#D8D3CA]"></span>
+
+                            </div>
+
+
+                            <div
+                                class="rounded-lg border border-[#E2DED5] bg-white px-5 py-1.5 text-xs font-medium text-[#9A958D]"
+                            >
+                                nepchat
+                            </div>
+
+
+                            <div class="w-12"></div>
+
+                        </div>
+
+
+                        <!-- Application -->
+                        <div
+                            class="grid min-h-[500px] grid-cols-[175px_1fr] sm:grid-cols-[220px_1fr]"
+                        >
+
+
+                            <!-- =============================
+                                 CHAT SIDEBAR
+                                 ============================= -->
+
+                            <aside
+                                class="border-r border-[#E8E4DD] bg-[#FCFBF8]"
+                            >
+
+                                <!-- User -->
+                                <div
+                                    class="flex items-center justify-between px-4 py-4"
+                                >
+
+                                    <div class="flex items-center gap-2.5">
+
+                                        <div class="relative">
+
+                                            <div
+                                                class="flex h-9 w-9 items-center justify-center rounded-full bg-[#171A1F] text-sm font-bold text-white"
+                                            >
+                                                A
+                                            </div>
+
+                                            <span
+                                                class="absolute bottom-0 right-0 h-2.5 w-2.5 rounded-full border-2 border-white bg-[#0F766E]"
+                                            ></span>
+
+                                        </div>
+
+
+                                        <div class="hidden sm:block">
+
+                                            <div class="text-xs font-bold">
+                                                Abhishekh
+                                            </div>
+
+                                            <div
+                                                class="text-[10px] text-[#0F766E]"
+                                            >
+                                                Online
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <button
+                                        type="button"
+                                        class="hidden h-8 w-8 items-center justify-center rounded-lg text-[#626A73] transition hover:bg-[#F0ECE5] sm:flex"
+                                        aria-label="New conversation"
+                                    >
+
+                                        <svg
+                                            class="h-4 w-4"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                        >
+                                            <path d="M12 5v14"></path>
+                                            <path d="M5 12h14"></path>
+                                        </svg>
+
+                                    </button>
+
+                                </div>
+
+
+                                <!-- Search -->
+                                <div class="px-3 pb-3">
+
+                                    <div
+                                        class="flex items-center gap-2 rounded-lg border border-[#E2DED5] bg-white px-3 py-2"
+                                    >
+
+                                        <svg
+                                            class="h-3.5 w-3.5 text-[#9A958D]"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                        >
+                                            <circle cx="11" cy="11" r="7"></circle>
+                                            <path d="m20 20-4-4"></path>
+                                        </svg>
+
+                                        <span class="text-[10px] text-[#9A958D]">
+                                            Search conversations
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Conversations -->
+                                <div class="space-y-1 px-2">
+
+
+                                    <!-- Family -->
+                                    <div
+                                        class="flex items-center gap-2.5 rounded-xl bg-[#F97316]/10 px-2.5 py-2.5"
+                                    >
+
+                                        <div
+                                            class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#F97316] text-xs font-bold text-white"
+                                        >
+                                            F
+                                        </div>
+
+                                        <div class="min-w-0 flex-1">
+
+                                            <div class="flex items-center justify-between">
+
+                                                <span
+                                                    class="truncate text-xs font-bold"
+                                                >
+                                                    Family
+                                                </span>
+
+                                                <span class="text-[9px] text-[#9A958D]">
+                                                    10:42
+                                                </span>
+
+                                            </div>
+
+                                            <p
+                                                class="truncate text-[10px] text-[#626A73]"
+                                            >
+                                                Mom: Call when you reach home
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- Friends -->
+                                    <div
+                                        class="flex items-center gap-2.5 rounded-xl px-2.5 py-2.5"
+                                    >
+
+                                        <div
+                                            class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#0F766E] text-xs font-bold text-white"
+                                        >
+                                            S
+                                        </div>
+
+                                        <div class="min-w-0 flex-1">
+
+                                            <div class="flex items-center justify-between">
+
+                                                <span class="truncate text-xs font-bold">
+                                                    Suman
+                                                </span>
+
+                                                <span class="text-[9px] text-[#9A958D]">
+                                                    09:18
+                                                </span>
+
+                                            </div>
+
+                                            <p class="truncate text-[10px] text-[#9A958D]">
+                                                Pokhara was amazing!
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- College -->
+                                    <div
+                                        class="flex items-center gap-2.5 rounded-xl px-2.5 py-2.5"
+                                    >
+
+                                        <div
+                                            class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#626A73] text-xs font-bold text-white"
+                                        >
+                                            C
+                                        </div>
+
+                                        <div class="min-w-0 flex-1">
+
+                                            <div class="flex items-center justify-between">
+
+                                                <span class="truncate text-xs font-bold">
+                                                    College Group
+                                                </span>
+
+                                                <span class="text-[9px] text-[#9A958D]">
+                                                    Mon
+                                                </span>
+
+                                            </div>
+
+                                            <p class="truncate text-[10px] text-[#9A958D]">
+                                                Riya: Assignment submitted
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- Kathmandu -->
+                                    <div
+                                        class="flex items-center gap-2.5 rounded-xl px-2.5 py-2.5"
+                                    >
+
+                                        <div
+                                            class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#171A1F] text-xs font-bold text-white"
+                                        >
+                                            K
+                                        </div>
+
+                                        <div class="min-w-0 flex-1">
+
+                                            <div class="flex items-center justify-between">
+
+                                                <span class="truncate text-xs font-bold">
+                                                    Kathmandu Friends
+                                                </span>
+
+                                                <span class="text-[9px] text-[#9A958D]">
+                                                    Sun
+                                                </span>
+
+                                            </div>
+
+                                            <p class="truncate text-[10px] text-[#9A958D]">
+                                                You: See you tomorrow
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </aside>
+
+
+                            <!-- =============================
+                                 MAIN CHAT
+                                 ============================= -->
+
+                            <div class="flex min-w-0 flex-col bg-white">
+
+                                <!-- Chat header -->
+                                <header
+                                    class="flex items-center justify-between border-b border-[#E8E4DD] px-4 py-3 sm:px-5"
+                                >
+
+                                    <div class="flex items-center gap-3">
+
+                                        <div class="relative">
+
+                                            <div
+                                                class="flex h-10 w-10 items-center justify-center rounded-full bg-[#F97316] text-sm font-bold text-white"
+                                            >
+                                                F
+                                            </div>
+
+                                            <span
+                                                class="absolute bottom-0 right-0 h-2.5 w-2.5 rounded-full border-2 border-white bg-[#0F766E]"
+                                            ></span>
+
+                                        </div>
+
+
+                                        <div>
+
+                                            <div class="text-sm font-bold">
+                                                Family
+                                            </div>
+
+                                            <div
+                                                class="text-[10px] text-[#0F766E]"
+                                            >
+                                                5 members online
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="flex items-center gap-1">
+
+                                        <button
+                                            type="button"
+                                            class="flex h-8 w-8 items-center justify-center rounded-lg text-[#626A73] hover:bg-[#F7F4EE]"
+                                            aria-label="Call"
+                                        >
+
+                                            <svg
+                                                class="h-4 w-4"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                            >
+                                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 3.08 5.18 2 2 0 0 1 5.06 3h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11L9 10.73a16 16 0 0 0 4.27 4.27l1.27-1.27a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92z"></path>
+                                            </svg>
+
+                                        </button>
+
+
+                                        <button
+                                            type="button"
+                                            class="hidden h-8 w-8 items-center justify-center rounded-lg text-[#626A73] hover:bg-[#F7F4EE] sm:flex"
+                                            aria-label="More options"
+                                        >
+
+                                            <svg
+                                                class="h-4 w-4"
+                                                viewBox="0 0 24 24"
+                                                fill="currentColor"
+                                            >
+                                                <circle cx="5" cy="12" r="1.5"></circle>
+                                                <circle cx="12" cy="12" r="1.5"></circle>
+                                                <circle cx="19" cy="12" r="1.5"></circle>
+                                            </svg>
+
+                                        </button>
+
+                                    </div>
+
+                                </header>
+
+
+                                <!-- Messages -->
+                                <div
+                                    class="flex-1 space-y-4 bg-[#FDFCF9] px-4 py-6 sm:px-6"
+                                >
+
+                                    <div class="text-center">
+
+                                        <span
+                                            class="rounded-full bg-[#F0ECE5] px-3 py-1 text-[9px] font-semibold text-[#9A958D]"
+                                        >
+                                            TODAY
+                                        </span>
+
+                                    </div>
+
+
+                                    <!-- Incoming -->
+                                    <div class="flex justify-start">
+
+                                        <div class="max-w-[78%]">
+
+                                            <div
+                                                class="rounded-2xl rounded-bl-md border border-[#E6E1D8] bg-white px-4 py-3 text-xs leading-5 text-[#3E454D] shadow-sm"
+                                            >
+                                                Have you reached home?
+                                            </div>
+
+                                            <div class="mt-1 text-[9px] text-[#A5A098]">
+                                                10:38 AM
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- Outgoing -->
+                                    <div class="flex justify-end">
+
+                                        <div class="max-w-[78%] text-right">
+
+                                            <div
+                                                class="rounded-2xl rounded-br-md bg-[#171A1F] px-4 py-3 text-left text-xs leading-5 text-white shadow-sm"
+                                            >
+                                                Yes, just reached. Everything is good.
+                                            </div>
+
+                                            <div class="mt-1 text-[9px] text-[#A5A098]">
+                                                10:40 AM
+                                                <span class="ml-1 text-[#0F766E]">
+                                                    ✓✓
+                                                </span>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- Incoming -->
+                                    <div class="flex justify-start">
+
+                                        <div class="max-w-[78%]">
+
+                                            <div
+                                                class="rounded-2xl rounded-bl-md border border-[#E6E1D8] bg-white px-4 py-3 text-xs leading-5 text-[#3E454D] shadow-sm"
+                                            >
+                                                Great 😊 Call us when you're free.
+                                            </div>
+
+                                            <div class="mt-1 text-[9px] text-[#A5A098]">
+                                                10:42 AM
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- Typing -->
+                                    <div class="flex items-center gap-2">
+
+                                        <div
+                                            class="flex h-7 w-7 items-center justify-center rounded-full bg-[#F97316] text-[9px] font-bold text-white"
+                                        >
+                                            M
+                                        </div>
+
+                                        <div
+                                            class="flex items-center gap-1 rounded-full bg-[#F0ECE5] px-3 py-2"
+                                        >
+                                            <span class="h-1.5 w-1.5 rounded-full bg-[#9A958D]"></span>
+                                            <span class="h-1.5 w-1.5 rounded-full bg-[#9A958D]"></span>
+                                            <span class="h-1.5 w-1.5 rounded-full bg-[#9A958D]"></span>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Composer -->
+                                <div class="border-t border-[#E8E4DD] bg-white p-3 sm:p-4">
+
+                                    <div
+                                        class="flex items-center gap-2 rounded-xl border border-[#DDD8CF] bg-[#FCFBF8] p-1.5"
+                                    >
+
+                                        <button
+                                            type="button"
+                                            class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-[#626A73] hover:bg-[#F0ECE5]"
+                                            aria-label="Add attachment"
+                                        >
+
+                                            <svg
+                                                class="h-4 w-4"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                            >
+                                                <path d="M12 5v14"></path>
+                                                <path d="M5 12h14"></path>
+                                            </svg>
+
+                                        </button>
+
+
+                                        <div
+                                            class="flex-1 px-2 text-xs text-[#A5A098]"
+                                        >
+                                            Write a message...
+                                        </div>
+
+
+                                        <button
+                                            type="button"
+                                            class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#F97316] text-white shadow-sm transition hover:bg-[#EA650F]"
+                                            aria-label="Send message"
+                                        >
+
+                                            <svg
+                                                class="h-4 w-4"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                            >
+                                                <path d="m22 2-7 20-4-9-9-4Z"></path>
+                                                <path d="M22 2 11 13"></path>
+                                            </svg>
+
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Floating notification -->
+                    <div
+                        class="absolute -bottom-5 -left-5 hidden w-60 rounded-2xl border border-[#E2DED5] bg-white p-4 shadow-xl sm:block"
+                    >
+
+                        <div class="flex items-center gap-3">
+
+                            <div
+                                class="flex h-10 w-10 items-center justify-center rounded-full bg-[#0F766E]/10 text-[#0F766E]"
+                            >
+
+                                <svg
+                                    class="h-5 w-5"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path>
+                                    <path d="M10 21h4"></path>
+                                </svg>
+
+                            </div>
+
+
+                            <div>
+
+                                <div class="text-xs font-bold">
+                                    New message
+                                </div>
+
+                                <div class="mt-0.5 text-[10px] text-[#626A73]">
+                                    Family sent you a message
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         NEPAL CONNECTION STRIP
+         ===================================================== -->
+
+    <section class="border-y border-[#E2DED5] bg-white">
+
+        <div
+            class="mx-auto max-w-7xl px-5 py-5 sm:px-8 lg:px-12"
+        >
+
+            <div
+                class="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm"
+            >
+
+                <span class="font-semibold text-[#171A1F]">
+                    Connecting Nepal
                 </span>
 
-                <h1 class="home-title hero-in hero-in-2">
-                    Connect.
-                    <span class="text-gradient">Communicate.</span>
-                    Chat.
-                </h1>
+                <span class="text-[#D8D3CA]">•</span>
 
-                <p class="home-description hero-in hero-in-3">
-                    A modern, secure communication platform built with Go,
-                    Gin and MySQL. Verified accounts, protected sessions and
-                    a clean interface, all in one place.
-                </p>
+                <span class="text-[#626A73]">
+                    Kathmandu
+                </span>
 
-                <div class="home-actions hero-in hero-in-4">
-                    <a href="/register" class="btn btn-primary btn-lg btn-glow">
-                        Create Account
-                    </a>
-                    <a href="/login" class="btn btn-outline-dark btn-lg">
-                        Sign In
-                    </a>
-                </div>
+                <span class="text-[#D8D3CA]">•</span>
 
-                <ul class="hero-points hero-in hero-in-5">
-                    <li>✔ Email-verified accounts</li>
-                    <li>✔ Protected sessions</li>
-                    <li>✔ Free to join</li>
-                </ul>
-            </div>
+                <span class="text-[#626A73]">
+                    Pokhara
+                </span>
 
-            <div class="col-lg-6">
-                <div class="chat-wrap hero-in hero-in-3">
+                <span class="text-[#D8D3CA]">•</span>
 
-                    <div class="float-chip float-chip-1">🔐 Verified</div>
-                    <div class="float-chip float-chip-2">⚡ Fast</div>
+                <span class="text-[#626A73]">
+                    Lalitpur
+                </span>
 
-                    <div class="chat-card">
+                <span class="text-[#D8D3CA]">•</span>
 
-                        <div class="chat-card-header">
-                            <div class="chat-avatar">💬</div>
-                            <div>
-                                <h5 class="mb-0">{{ .AppName }}</h5>
-                                <small><span class="status-dot"></span> Online</small>
-                            </div>
-                        </div>
+                <span class="text-[#626A73]">
+                    Bharatpur
+                </span>
 
-                        <div class="chat-messages">
-                            <div class="message message-left msg-1">
-                                <span>Hey! Welcome 👋</span>
-                            </div>
-                            <div class="message message-right msg-2">
-                                <span>Nice to meet you!</span>
-                            </div>
-                            <div class="message message-left msg-3">
-                                <span>Ready to start chatting?</span>
-                            </div>
-                            <div class="message message-right msg-4">
-                                <span>Absolutely 🚀</span>
-                            </div>
-                            <div class="message message-left msg-5">
-                                <span class="typing">
-                                    <i></i><i></i><i></i>
-                                </span>
-                            </div>
-                        </div>
+                <span class="text-[#D8D3CA]">•</span>
 
-                        <div class="chat-input">
-                            <span>Type a message...</span>
-                            <button type="button">Send</button>
-                        </div>
+                <span class="text-[#626A73]">
+                    Biratnagar
+                </span>
 
-                    </div>
-                </div>
+                <span class="text-[#D8D3CA]">•</span>
+
+                <span class="text-[#626A73]">
+                    Butwal
+                </span>
+
+                <span class="text-[#D8D3CA]">•</span>
+
+                <span class="text-[#626A73]">
+                    Dharan
+                </span>
+
             </div>
 
         </div>
-    </div>
-</section>
+
+    </section>
 
 
-<!-- ========================= TECH STRIP ========================= -->
-<section class="tech-strip">
-    <div class="container">
-        <p class="tech-label">Built with modern, proven technology</p>
-        <ul class="tech-list">
-            <li>Go</li>
-            <li>Gin</li>
-            <li>MySQL</li>
-            <li>JWT</li>
-            <li>Bootstrap</li>
-        </ul>
-    </div>
-</section>
+    <!-- =====================================================
+         FEATURES
+         ===================================================== -->
 
+    <section id="features" class="bg-[#F7F4EE]">
 
-<!-- ========================= FEATURES ========================= -->
-<section class="features-section" id="features">
-    <div class="container">
+        <div
+            class="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-12 lg:py-32"
+        >
 
-        <div class="text-center mb-5 reveal">
-            <span class="section-label">FEATURES</span>
-            <h2 class="section-title">Everything you need to get started</h2>
-            <p class="section-description">
-                A solid foundation for secure everyday communication.
-            </p>
-        </div>
+            <div class="max-w-2xl">
 
-        <div class="row g-4">
+                <span
+                    class="text-sm font-bold uppercase tracking-[0.18em] text-[#F97316]"
+                >
+                    Why NepChat
+                </span>
 
-            <div class="col-md-6 col-lg-4 reveal">
-                <div class="feature-card">
-                    <div class="feature-icon">🔐</div>
-                    <h4>Secure sign-in</h4>
-                    <p>Passwords are hashed and sessions use short-lived access tokens with refresh support.</p>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 reveal reveal-d1">
-                <div class="feature-card">
-                    <div class="feature-icon">✉️</div>
-                    <h4>Email verification</h4>
-                    <p>Every account is confirmed by email so you always know who you are talking to.</p>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 reveal reveal-d2">
-                <div class="feature-card">
-                    <div class="feature-icon">🔑</div>
-                    <h4>Password recovery</h4>
-                    <p>Forgot your password? A time-limited reset link gets you back in safely.</p>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 reveal">
-                <div class="feature-card">
-                    <div class="feature-icon">🛡️</div>
-                    <h4>Role-based access</h4>
-                    <p>Users, analysts and admins each get exactly the access their role needs.</p>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 reveal reveal-d1">
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h4>Fast backend</h4>
-                    <p>Built with Go and Gin for quick, lightweight and responsive requests.</p>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 reveal reveal-d2">
-                <div class="feature-card">
-                    <div class="feature-icon">📱</div>
-                    <h4>Works everywhere</h4>
-                    <p>A responsive interface that looks great on phones, tablets and desktops.</p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-
-<!-- ========================= HOW IT WORKS ========================= -->
-<section class="steps-section" id="how-it-works">
-    <div class="container">
-
-        <div class="text-center mb-5 reveal">
-            <span class="section-label">HOW IT WORKS</span>
-            <h2 class="section-title">Up and running in three steps</h2>
-        </div>
-
-        <div class="row g-4 steps-row">
-
-            <div class="col-md-4 reveal">
-                <div class="step-card">
-                    <div class="step-number">1</div>
-                    <h4>Create your account</h4>
-                    <p>Sign up with your name, email and a strong password.</p>
-                </div>
-            </div>
-
-            <div class="col-md-4 reveal reveal-d1">
-                <div class="step-card">
-                    <div class="step-number">2</div>
-                    <h4>Verify your email</h4>
-                    <p>Click the link we send you to confirm it is really you.</p>
-                </div>
-            </div>
-
-            <div class="col-md-4 reveal reveal-d2">
-                <div class="step-card">
-                    <div class="step-number">3</div>
-                    <h4>Sign in and go</h4>
-                    <p>Log in and start using {{ .AppName }} right away.</p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-
-<!-- ========================= SECURITY ========================= -->
-<section class="security-section">
-    <div class="container">
-        <div class="row align-items-center g-5">
-
-            <div class="col-lg-6 reveal">
-                <span class="section-label">SECURITY FIRST</span>
-                <h2 class="section-title text-start">
-                    Your privacy is not an afterthought
+                <h2
+                    class="mt-4 text-4xl font-black tracking-tight text-[#171A1F] sm:text-5xl"
+                >
+                    Made for the way
+                    <br>
+                    Nepal stays connected.
                 </h2>
-                <p class="security-text">
-                    Security is built into every layer, from how passwords
-                    are stored to how every request is validated.
+
+                <p
+                    class="mt-6 text-lg leading-8 text-[#626A73]"
+                >
+                    Whether you're talking to your family at home,
+                    classmates at college, friends in another city,
+                    or people thousands of kilometres away, NepChat
+                    keeps conversations together.
                 </p>
 
-                <ul class="check-list">
-                    <li>Hashed passwords, never stored in plain text</li>
-                    <li>Short-lived tokens with safe refresh</li>
-                    <li>Strict security headers on every response</li>
-                    <li>Request size limits and rate limiting</li>
-                </ul>
             </div>
 
-            <div class="col-lg-6 reveal reveal-d1">
-                <div class="shield-card">
-                    <div class="shield-icon">🛡️</div>
-                    <div class="shield-lines">
-                        <span></span>
-                        <span></span>
-                        <span></span>
+
+            <!-- Feature grid -->
+            <div class="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+
+
+                <!-- Feature 1 -->
+                <article
+                    class="rounded-[1.75rem] border border-[#E2DED5] bg-white p-7 transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+                >
+
+                    <div
+                        class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#171A1F] text-white"
+                    >
+
+                        <svg
+                            class="h-5 w-5"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"></path>
+                        </svg>
+
                     </div>
-                    <p class="mb-0">Protected end to end</p>
-                </div>
+
+                    <h3 class="mt-6 text-xl font-black">
+                        One-to-one chat
+                    </h3>
+
+                    <p class="mt-3 text-sm leading-7 text-[#626A73]">
+                        Have simple conversations with the people
+                        you talk to every day.
+                    </p>
+
+                </article>
+
+
+                <!-- Feature 2 -->
+                <article
+                    class="rounded-[1.75rem] border border-[#E2DED5] bg-white p-7 transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+                >
+
+                    <div
+                        class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#F97316]/10 text-[#F97316]"
+                    >
+
+                        <svg
+                            class="h-5 w-5"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+
+                    </div>
+
+                    <h3 class="mt-6 text-xl font-black">
+                        Groups
+                    </h3>
+
+                    <p class="mt-3 text-sm leading-7 text-[#626A73]">
+                        Keep family, friends, college groups and
+                        communities in one place.
+                    </p>
+
+                </article>
+
+
+                <!-- Feature 3 -->
+                <article
+                    class="rounded-[1.75rem] border border-[#E2DED5] bg-white p-7 transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+                >
+
+                    <div
+                        class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#0F766E]/10 text-[#0F766E]"
+                    >
+
+                        <svg
+                            class="h-5 w-5"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <path d="M4 12h16"></path>
+                            <path d="M12 4v16"></path>
+                        </svg>
+
+                    </div>
+
+                    <h3 class="mt-6 text-xl font-black">
+                        Easy to use
+                    </h3>
+
+                    <p class="mt-3 text-sm leading-7 text-[#626A73]">
+                        A clean interface that keeps the important
+                        things simple.
+                    </p>
+
+                </article>
+
+
+                <!-- Feature 4 -->
+                <article
+                    class="rounded-[1.75rem] border border-[#E2DED5] bg-white p-7 transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+                >
+
+                    <div
+                        class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#171A1F] text-white"
+                    >
+
+                        <svg
+                            class="h-5 w-5"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <circle cx="12" cy="12" r="9"></circle>
+                            <path d="M12 8v4l3 2"></path>
+                        </svg>
+
+                    </div>
+
+                    <h3 class="mt-6 text-xl font-black">
+                        Stay connected
+                    </h3>
+
+                    <p class="mt-3 text-sm leading-7 text-[#626A73]">
+                        Pick up conversations when it suits you
+                        and keep your connections close.
+                    </p>
+
+                </article>
+
+
+                <!-- Feature 5 -->
+                <article
+                    class="rounded-[1.75rem] border border-[#E2DED5] bg-white p-7 transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+                >
+
+                    <div
+                        class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#F97316]/10 text-[#F97316]"
+                    >
+
+                        <svg
+                            class="h-5 w-5"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <path d="M12 3 4 6v6c0 5 3.4 8.4 8 9 4.6-.6 8-4 8-9V6l-8-3z"></path>
+                            <path d="m9 12 2 2 4-4"></path>
+                        </svg>
+
+                    </div>
+
+                    <h3 class="mt-6 text-xl font-black">
+                        Account security
+                    </h3>
+
+                    <p class="mt-3 text-sm leading-7 text-[#626A73]">
+                        Authentication, verification and protected
+                        sessions are part of the platform experience.
+                    </p>
+
+                </article>
+
+
+                <!-- Feature 6 -->
+                <article
+                    class="rounded-[1.75rem] border border-[#E2DED5] bg-[#171A1F] p-7 text-white transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+                >
+
+                    <div
+                        class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#F97316]"
+                    >
+
+                        <svg
+                            class="h-5 w-5"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <path d="M12 3v18"></path>
+                            <path d="M3 12h18"></path>
+                        </svg>
+
+                    </div>
+
+                    <h3 class="mt-6 text-xl font-black">
+                        Built to grow
+                    </h3>
+
+                    <p class="mt-3 text-sm leading-7 text-white/55">
+                        NepChat starts with conversations and can grow
+                        with the needs of its community.
+                    </p>
+
+                </article>
+
             </div>
 
         </div>
-    </div>
-</section>
+
+    </section>
 
 
-<!-- ========================= CTA ========================= -->
-<section class="cta-section">
-    <div class="container reveal">
-        <div class="cta-card text-center">
-            <h2>Ready to get started?</h2>
-            <p>Create your account and start using {{ .AppName }} today.</p>
-            <a href="/register" class="btn btn-light btn-lg btn-glow-light">
-                Get Started
-            </a>
+    <!-- =====================================================
+         NEPAL EVERYDAY LIFE
+         ===================================================== -->
+
+    <section class="border-y border-[#E2DED5] bg-white">
+
+        <div
+            class="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-12 lg:py-32"
+        >
+
+            <div class="grid items-center gap-16 lg:grid-cols-2 lg:gap-24">
+
+
+                <!-- Copy -->
+                <div>
+
+                    <span
+                        class="text-sm font-bold uppercase tracking-[0.18em] text-[#0F766E]"
+                    >
+                        Everyday Nepal
+                    </span>
+
+                    <h2
+                        class="mt-4 text-4xl font-black tracking-tight text-[#171A1F] sm:text-5xl"
+                    >
+                        One app.
+                        <br>
+                        Many kinds of connection.
+                    </h2>
+
+                    <p
+                        class="mt-6 max-w-xl text-lg leading-8 text-[#626A73]"
+                    >
+                        Nepal is more than one city. People move for
+                        education, work, family and opportunity. NepChat
+                        is designed around those everyday connections.
+                    </p>
+
+
+                    <div class="mt-9 space-y-5">
+
+
+                        <!-- Family -->
+                        <div class="flex gap-4">
+
+                            <div
+                                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#F97316]/10 text-[#F97316]"
+                            >
+
+                                <svg
+                                    class="h-5 w-5"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M2 21v-2a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v2"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 4 3.87"></path>
+                                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                </svg>
+
+                            </div>
+
+                            <div>
+
+                                <h3 class="font-bold">
+                                    Family
+                                </h3>
+
+                                <p class="mt-1 text-sm leading-6 text-[#626A73]">
+                                    Keep conversations going even when
+                                    family members live in different places.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Students -->
+                        <div class="flex gap-4">
+
+                            <div
+                                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#171A1F] text-white"
+                            >
+
+                                <svg
+                                    class="h-5 w-5"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <path d="m2 10 10-5 10 5-10 5-10-5Z"></path>
+                                    <path d="M6 12v5c3 2 9 2 12 0v-5"></path>
+                                </svg>
+
+                            </div>
+
+                            <div>
+
+                                <h3 class="font-bold">
+                                    Students & classmates
+                                </h3>
+
+                                <p class="mt-1 text-sm leading-6 text-[#626A73]">
+                                    Keep college conversations,
+                                    plans and everyday discussions together.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Friends -->
+                        <div class="flex gap-4">
+
+                            <div
+                                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#0F766E]/10 text-[#0F766E]"
+                            >
+
+                                <svg
+                                    class="h-5 w-5"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+
+                            </div>
+
+                            <div>
+
+                                <h3 class="font-bold">
+                                    Friends & communities
+                                </h3>
+
+                                <p class="mt-1 text-sm leading-6 text-[#626A73]">
+                                    Bring your people together around the
+                                    conversations that matter.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Abroad -->
+                        <div class="flex gap-4">
+
+                            <div
+                                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#F97316]/10 text-[#F97316]"
+                            >
+
+                                <svg
+                                    class="h-5 w-5"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <circle cx="12" cy="12" r="9"></circle>
+                                    <path d="M3 12h18"></path>
+                                    <path d="M12 3c3 3 3 15 0 18"></path>
+                                    <path d="M12 3c-3 3-3 15 0 18"></path>
+                                </svg>
+
+                            </div>
+
+                            <div>
+
+                                <h3 class="font-bold">
+                                    Nepal to the world
+                                </h3>
+
+                                <p class="mt-1 text-sm leading-6 text-[#626A73]">
+                                    Stay close to people in Nepal and
+                                    loved ones living abroad.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Visual -->
+                <div class="relative">
+
+                    <div
+                        class="absolute -inset-8 rounded-full bg-[#F97316]/7 blur-3xl"
+                    ></div>
+
+
+                    <div
+                        class="relative overflow-hidden rounded-[2rem] border border-[#DDD8CF] bg-[#F7F4EE] p-5 shadow-[0_25px_70px_rgba(23,26,31,0.10)]"
+                    >
+
+                        <div
+                            class="rounded-[1.5rem] bg-[#171A1F] p-6 text-white"
+                        >
+
+                            <div class="flex items-center justify-between">
+
+                                <div>
+
+                                    <p
+                                        class="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#F97316]"
+                                    >
+                                        NepChat
+                                    </p>
+
+                                    <h3 class="mt-2 text-xl font-black">
+                                        People, places, connections.
+                                    </h3>
+
+                                </div>
+
+
+                                <div
+                                    class="flex h-11 w-11 items-center justify-center rounded-xl bg-[#F97316]"
+                                >
+                                    N
+                                </div>
+
+                            </div>
+
+
+                            <!-- Connection map -->
+                            <div class="relative mt-8 h-64 overflow-hidden rounded-2xl bg-white/5">
+
+                                <!-- Connection lines -->
+                                <svg
+                                    viewBox="0 0 400 250"
+                                    class="absolute inset-0 h-full w-full"
+                                    fill="none"
+                                    aria-hidden="true"
+                                >
+
+                                    <path
+                                        d="M75 70 C145 100 170 45 220 80 C270 115 300 55 335 95"
+                                        stroke="currentColor"
+                                        stroke-width="1"
+                                        opacity=".18"
+                                    />
+
+                                    <path
+                                        d="M75 70 C135 150 205 165 270 130 C300 115 315 175 335 195"
+                                        stroke="currentColor"
+                                        stroke-width="1"
+                                        opacity=".18"
+                                    />
+
+                                    <path
+                                        d="M220 80 C210 130 225 170 270 130"
+                                        stroke="currentColor"
+                                        stroke-width="1"
+                                        opacity=".18"
+                                    />
+
+                                </svg>
+
+
+                                <!-- Kathmandu -->
+                                <div
+                                    class="absolute left-[12%] top-[20%] text-center"
+                                >
+
+                                    <div
+                                        class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#F97316] text-sm font-bold shadow-lg"
+                                    >
+                                        K
+                                    </div>
+
+                                    <p class="mt-2 text-[10px] text-white/55">
+                                        Kathmandu
+                                    </p>
+
+                                </div>
+
+
+                                <!-- Pokhara -->
+                                <div
+                                    class="absolute left-[50%] top-[25%] text-center"
+                                >
+
+                                    <div
+                                        class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#0F766E] text-sm font-bold shadow-lg"
+                                    >
+                                        P
+                                    </div>
+
+                                    <p class="mt-2 text-[10px] text-white/55">
+                                        Pokhara
+                                    </p>
+
+                                </div>
+
+
+                                <!-- Biratnagar -->
+                                <div
+                                    class="absolute right-[10%] top-[27%] text-center"
+                                >
+
+                                    <div
+                                        class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-white text-sm font-bold text-[#171A1F] shadow-lg"
+                                    >
+                                        B
+                                    </div>
+
+                                    <p class="mt-2 text-[10px] text-white/55">
+                                        Biratnagar
+                                    </p>
+
+                                </div>
+
+
+                                <!-- Bharatpur -->
+                                <div
+                                    class="absolute left-[58%] bottom-[18%] text-center"
+                                >
+
+                                    <div
+                                        class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#F97316] text-sm font-bold shadow-lg"
+                                    >
+                                        B
+                                    </div>
+
+                                    <p class="mt-2 text-[10px] text-white/55">
+                                        Bharatpur
+                                    </p>
+
+                                </div>
+
+
+                                <!-- World -->
+                                <div
+                                    class="absolute right-[8%] bottom-[15%] text-center"
+                                >
+
+                                    <div
+                                        class="mx-auto flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/10 text-sm font-bold"
+                                    >
+                                        ↗
+                                    </div>
+
+                                    <p class="mt-2 text-[10px] text-white/55">
+                                        Anywhere
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <p
+                                class="mt-5 text-center text-xs leading-5 text-white/40"
+                            >
+                                One conversation can connect people
+                                across cities, communities and borders.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
-    </div>
-</section>
+
+    </section>
+
+
+    <!-- =====================================================
+         CONVERSATION EXPERIENCE
+         ===================================================== -->
+
+    <section id="how-it-works" class="bg-[#F7F4EE]">
+
+        <div
+            class="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-12 lg:py-32"
+        >
+
+            <div class="mx-auto max-w-2xl text-center">
+
+                <span
+                    class="text-sm font-bold uppercase tracking-[0.18em] text-[#F97316]"
+                >
+                    Simple by design
+                </span>
+
+                <h2
+                    class="mt-4 text-4xl font-black tracking-tight sm:text-5xl"
+                >
+                    Start talking in minutes.
+                </h2>
+
+                <p
+                    class="mt-5 text-lg leading-8 text-[#626A73]"
+                >
+                    No complicated setup. Create your account,
+                    connect with people and start your conversation.
+                </p>
+
+            </div>
+
+
+            <div class="mt-16 grid gap-6 md:grid-cols-3">
+
+
+                <!-- Step 1 -->
+                <article
+                    class="relative rounded-[2rem] border border-[#E2DED5] bg-white p-8"
+                >
+
+                    <span
+                        class="font-mono text-xs font-bold tracking-widest text-[#F97316]"
+                    >
+                        01
+                    </span>
+
+                    <div
+                        class="mt-7 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#171A1F] text-xl font-black text-white"
+                    >
+                        N
+                    </div>
+
+                    <h3 class="mt-6 text-xl font-black">
+                        Create your account
+                    </h3>
+
+                    <p class="mt-3 leading-7 text-[#626A73]">
+                        Register with your details and set up your
+                        NepChat account.
+                    </p>
+
+                </article>
+
+
+                <!-- Step 2 -->
+                <article
+                    class="relative rounded-[2rem] border border-[#E2DED5] bg-white p-8"
+                >
+
+                    <span
+                        class="font-mono text-xs font-bold tracking-widest text-[#0F766E]"
+                    >
+                        02
+                    </span>
+
+                    <div
+                        class="mt-7 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0F766E]/10 text-[#0F766E]"
+                    >
+
+                        <svg
+                            class="h-6 w-6"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <circle cx="11" cy="11" r="7"></circle>
+                            <path d="m20 20-4-4"></path>
+                        </svg>
+
+                    </div>
+
+                    <h3 class="mt-6 text-xl font-black">
+                        Find your people
+                    </h3>
+
+                    <p class="mt-3 leading-7 text-[#626A73]">
+                        Find the people and conversations you want
+                        to keep close.
+                    </p>
+
+                </article>
+
+
+                <!-- Step 3 -->
+                <article
+                    class="relative rounded-[2rem] border border-[#E2DED5] bg-[#171A1F] p-8 text-white"
+                >
+
+                    <span
+                        class="font-mono text-xs font-bold tracking-widest text-[#F97316]"
+                    >
+                        03
+                    </span>
+
+                    <div
+                        class="mt-7 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#F97316]"
+                    >
+
+                        <svg
+                            class="h-6 w-6"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <path d="m22 2-7 20-4-9-9-4Z"></path>
+                            <path d="M22 2 11 13"></path>
+                        </svg>
+
+                    </div>
+
+                    <h3 class="mt-6 text-xl font-black">
+                        Start chatting
+                    </h3>
+
+                    <p class="mt-3 leading-7 text-white/55">
+                        Send your first message and keep the
+                        conversation going.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SECURITY
+         ===================================================== -->
+
+    <section class="border-y border-[#E2DED5] bg-white">
+
+        <div
+            class="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-12 lg:py-32"
+        >
+
+            <div class="grid items-center gap-16 lg:grid-cols-2 lg:gap-24">
+
+
+                <!-- Security visual -->
+                <div class="order-2 lg:order-1">
+
+                    <div
+                        class="mx-auto max-w-md overflow-hidden rounded-[2rem] bg-[#171A1F] p-8 shadow-2xl"
+                    >
+
+                        <div class="flex items-center justify-between">
+
+                            <span class="font-bold text-white">
+                                NepChat account
+                            </span>
+
+                            <span
+                                class="flex items-center gap-2 text-xs text-[#7DD3C7]"
+                            >
+                                <span
+                                    class="h-2 w-2 rounded-full bg-[#0F766E]"
+                                ></span>
+                                Protected
+                            </span>
+
+                        </div>
+
+
+                        <div class="mt-10 flex justify-center">
+
+                            <div
+                                class="flex h-32 w-32 items-center justify-center rounded-full border border-white/10 bg-white/5"
+                            >
+
+                                <svg
+                                    class="h-16 w-16 text-[#F97316]"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.5"
+                                >
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                    <path d="m9 12 2 2 4-4"></path>
+                                </svg>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="mt-10 space-y-3">
+
+                            <div
+                                class="flex items-center justify-between rounded-xl bg-white/5 px-4 py-3"
+                            >
+
+                                <span class="text-xs text-white/55">
+                                    Account authentication
+                                </span>
+
+                                <span class="text-xs font-bold text-[#7DD3C7]">
+                                    Active
+                                </span>
+
+                            </div>
+
+
+                            <div
+                                class="flex items-center justify-between rounded-xl bg-white/5 px-4 py-3"
+                            >
+
+                                <span class="text-xs text-white/55">
+                                    Email verification
+                                </span>
+
+                                <span class="text-xs font-bold text-[#7DD3C7]">
+                                    Active
+                                </span>
+
+                            </div>
+
+
+                            <div
+                                class="flex items-center justify-between rounded-xl bg-white/5 px-4 py-3"
+                            >
+
+                                <span class="text-xs text-white/55">
+                                    Session controls
+                                </span>
+
+                                <span class="text-xs font-bold text-[#7DD3C7]">
+                                    Active
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Security copy -->
+                <div class="order-1 lg:order-2">
+
+                    <span
+                        class="text-sm font-bold uppercase tracking-[0.18em] text-[#0F766E]"
+                    >
+                        Built with care
+                    </span>
+
+                    <h2
+                        class="mt-4 text-4xl font-black tracking-tight sm:text-5xl"
+                    >
+                        Your account
+                        <br>
+                        matters.
+                    </h2>
+
+                    <p
+                        class="mt-6 max-w-xl text-lg leading-8 text-[#626A73]"
+                    >
+                        NepChat is designed with security in mind,
+                        from account authentication and verification
+                        to protected session handling.
+                    </p>
+
+
+                    <div class="mt-9 space-y-5">
+
+
+                        <div class="flex gap-4">
+
+                            <div
+                                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#0F766E]/10 font-bold text-[#0F766E]"
+                            >
+                                ✓
+                            </div>
+
+                            <div>
+
+                                <h3 class="font-bold">
+                                    Account authentication
+                                </h3>
+
+                                <p
+                                    class="mt-1 text-sm leading-6 text-[#626A73]"
+                                >
+                                    Sign-in and account access are
+                                    handled through dedicated authentication
+                                    flows.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="flex gap-4">
+
+                            <div
+                                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#0F766E]/10 font-bold text-[#0F766E]"
+                            >
+                                ✓
+                            </div>
+
+                            <div>
+
+                                <h3 class="font-bold">
+                                    Email verification
+                                </h3>
+
+                                <p
+                                    class="mt-1 text-sm leading-6 text-[#626A73]"
+                                >
+                                    Verification helps establish
+                                    greater trust around user accounts.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="flex gap-4">
+
+                            <div
+                                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#0F766E]/10 font-bold text-[#0F766E]"
+                            >
+                                ✓
+                            </div>
+
+                            <div>
+
+                                <h3 class="font-bold">
+                                    Protected sessions
+                                </h3>
+
+                                <p
+                                    class="mt-1 text-sm leading-6 text-[#626A73]"
+                                >
+                                    Session handling is designed as
+                                    part of the application's security model.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FINAL CTA
+         ===================================================== -->
+
+    <section class="bg-[#F7F4EE]">
+
+        <div
+            class="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-12 lg:py-32"
+        >
+
+            <div
+                class="relative overflow-hidden rounded-[2.5rem] bg-[#171A1F] px-6 py-20 text-center shadow-2xl sm:px-12"
+            >
+
+                <!-- Decorative shapes -->
+                <div
+                    class="pointer-events-none absolute -right-28 -top-28 h-80 w-80 rounded-full bg-[#F97316]/15 blur-3xl"
+                ></div>
+
+                <div
+                    class="pointer-events-none absolute -bottom-28 -left-28 h-80 w-80 rounded-full bg-[#0F766E]/15 blur-3xl"
+                ></div>
+
+
+                <div class="relative mx-auto max-w-2xl">
+
+
+                    <!-- Logo -->
+                    <div
+                        class="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-[#F97316] text-2xl font-black text-white shadow-lg shadow-[#F97316]/20"
+                    >
+                        N
+                    </div>
+
+
+                    <p
+                        class="mt-6 text-sm font-bold uppercase tracking-[0.18em] text-[#F97316]"
+                    >
+                        Made for Nepal
+                    </p>
+
+
+                    <h2
+                        class="mt-4 text-4xl font-black tracking-tight text-white sm:text-5xl"
+                    >
+                        Your people are
+                        <br>
+                        closer than you think.
+                    </h2>
+
+
+                    <p
+                        class="mx-auto mt-5 max-w-xl text-lg leading-8 text-white/55"
+                    >
+                        Join NepChat and make your everyday conversations
+                        part of one simple, connected space.
+                    </p>
+
+
+                    <div
+                        class="mt-9 flex flex-col justify-center gap-3 sm:flex-row"
+                    >
+
+                        <a
+                            href="/register"
+                            class="inline-flex items-center justify-center rounded-xl bg-[#F97316] px-7 py-3.5 font-bold text-white transition hover:-translate-y-0.5 hover:bg-[#EA650F]"
+                        >
+                            Join NepChat
+                        </a>
+
+
+                        <a
+                            href="/login"
+                            class="inline-flex items-center justify-center rounded-xl border border-white/15 bg-white/5 px-7 py-3.5 font-bold text-white transition hover:bg-white/10"
+                        >
+                            Sign in
+                        </a>
+
+                    </div>
+
+
+                    <!-- Creator credit -->
+                    <p class="mt-10 text-xs text-white/30">
+                        An independent messaging project by
+                        <span class="font-semibold text-white/45">
+                            Abhishekh Kumar Sah
+                        </span>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</div>
 
 {{ end }}

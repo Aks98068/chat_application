@@ -1,0 +1,235 @@
+/* ==========================================================
+   ANIMATIONS.CSS
+   Works together with /js/app.js. Plain CSS, easy to edit.
+========================================================== */
+
+:root {
+    --anim-ease: cubic-bezier(0.4, 0, 0.2, 1);
+    --anim-time: 0.7s;
+}
+
+/* ----------------------------------------------------------
+   1. SCROLL REVEAL
+   app.js adds these classes automatically.
+---------------------------------------------------------- */
+
+.anim {
+    opacity: 0;
+    transition:
+        opacity var(--anim-time) var(--anim-ease),
+        transform var(--anim-time) var(--anim-ease);
+    transition-delay: var(--anim-delay, 0ms);
+}
+
+.anim-up    { transform: translateY(30px); }
+.anim-left  { transform: translateX(-40px); }
+.anim-right { transform: translateX(40px); }
+.anim-zoom  { transform: scale(0.94) translateY(20px); }
+
+.anim.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* On small screens slide up instead of sideways */
+@media (max-width: 991px) {
+    .anim-left,
+    .anim-right {
+        transform: translateY(30px);
+    }
+}
+
+/* Stops sideways slides from creating a horizontal scrollbar.
+   Use hidden as a safe fallback for older Safari, while clip remains
+   where supported for the best cross-browser behavior. */
+.site-main {
+    overflow-x: hidden;
+}
+
+@supports (overflow-x: clip) {
+    .site-main {
+        overflow-x: clip;
+    }
+}
+
+/* ----------------------------------------------------------
+   2. PAGE LEAVE
+---------------------------------------------------------- */
+
+.site-main {
+    transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.page-leaving .site-main {
+    opacity: 0;
+    transform: translateY(-8px);
+}
+
+/* ----------------------------------------------------------
+   3. HEADER SHADOW ON SCROLL
+---------------------------------------------------------- */
+
+.site-header {
+    transition: box-shadow 0.3s var(--anim-ease);
+}
+
+.site-header.is-scrolled {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* ----------------------------------------------------------
+   4. SCROLL PROGRESS BAR
+---------------------------------------------------------- */
+
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1100;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #0d6efd, #6f42c1);
+    transform: scaleX(var(--progress, 0));
+    transform-origin: left;
+    pointer-events: none;
+}
+
+/* ----------------------------------------------------------
+   5. BACK-TO-TOP BUTTON
+---------------------------------------------------------- */
+
+.to-top {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 1050;
+    width: 46px;
+    height: 46px;
+    border: 0;
+    border-radius: 50%;
+    background: #0d6efd;
+    color: #fff;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: 0 10px 24px rgba(13, 110, 253, 0.35);
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    transition:
+        opacity 0.3s var(--anim-ease),
+        transform 0.3s var(--anim-ease),
+        background-color 0.2s var(--anim-ease);
+}
+
+.to-top.is-shown {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.to-top:hover {
+    background: #0a58ca;
+    transform: translateY(-3px);
+}
+
+.to-top:focus-visible {
+    outline: 2px solid #0a58ca;
+    outline-offset: 3px;
+}
+
+/* ----------------------------------------------------------
+   6. BUTTON RIPPLE
+---------------------------------------------------------- */
+
+.btn,
+.site-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: currentColor;
+    opacity: 0.25;
+    transform: scale(0);
+    pointer-events: none;
+    animation: ripple 0.6s linear;
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+/* ----------------------------------------------------------
+   7. FORMS
+---------------------------------------------------------- */
+
+.form-control,
+.form-select {
+    transition:
+        border-color 0.2s var(--anim-ease),
+        box-shadow 0.2s var(--anim-ease),
+        transform 0.2s var(--anim-ease);
+}
+
+.form-control:focus,
+.form-select:focus {
+    transform: translateY(-1px);
+}
+
+.shake {
+    animation: shake 0.4s ease;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%      { transform: translateX(-6px); }
+    40%      { transform: translateX(6px); }
+    60%      { transform: translateX(-4px); }
+    80%      { transform: translateX(4px); }
+}
+
+/* ----------------------------------------------------------
+   8. CARDS (hover lift for any Bootstrap card)
+---------------------------------------------------------- */
+
+.card {
+    transition:
+        transform 0.25s var(--anim-ease),
+        box-shadow 0.25s var(--anim-ease);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.1);
+}
+
+/* ----------------------------------------------------------
+   9. REDUCED MOTION
+---------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .anim,
+    .anim-up,
+    .anim-left,
+    .anim-right,
+    .anim-zoom {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .scroll-progress,
+    .to-top,
+    .ripple,
+    .shake {
+        animation: none;
+        transition: none;
+    }
+}

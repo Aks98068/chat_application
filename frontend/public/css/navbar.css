@@ -1,0 +1,461 @@
+/* ==========================================================
+   NAVBAR.CSS: plain CSS navbar (navy + red theme)
+   Breakpoint: 1200px (desktop menu above, hamburger below)
+========================================================== */
+
+:root {
+    --nb-primary: #1b2148;
+    --nb-accent: #d71920;
+    --nb-accent-hover: #b9151b;
+    --nb-accent-light: #fdecec;
+    --nb-muted: #6b7280;
+    --nb-border: #e5e7eb;
+    --nb-surface: #ffffff;
+    --nb-surface-muted: #f7f7fa;
+    --nb-height: 5rem;
+    --nb-ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Fixed header, so push the page down by its height */
+.site-body {
+    padding-top: var(--nb-height);
+}
+
+/* ---------- Header + bar ---------- */
+
+.nb-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: var(--nb-surface);
+    border-bottom: 1px solid var(--nb-border);
+    transition: box-shadow 0.3s var(--nb-ease);
+}
+
+.nb-header.is-scrolled {
+    box-shadow: 0 8px 24px rgba(16, 20, 46, 0.08);
+}
+
+.nb-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    height: var(--nb-height);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ---------- Logo ---------- */
+
+.nb-logo {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    transition: opacity 0.2s var(--nb-ease);
+}
+
+.nb-logo:hover { opacity: 0.85; }
+
+.nb-logo-mark {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--nb-primary);
+    font-size: 20px;
+}
+
+.nb-logo-text {
+    display: none;
+    line-height: 1.15;
+}
+
+.nb-logo-1,
+.nb-logo-2 {
+    display: block;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: -0.3px;
+}
+
+.nb-logo-1 { color: var(--nb-primary); }
+.nb-logo-2 { color: var(--nb-accent); }
+
+@media (min-width: 576px) {
+    .nb-logo-text { display: block; }
+}
+
+/* ---------- Links ---------- */
+
+.nb-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border: 0;
+    background: none;
+    color: var(--nb-muted);
+    font: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.18s ease;
+}
+
+.nb-link:hover,
+.nb-link.is-active,
+.nb-dropdown.is-open > .nb-link {
+    color: var(--nb-accent);
+}
+
+.nb-link.is-active::after {
+    content: "";
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    bottom: -2px;
+    height: 2px;
+    border-radius: 999px;
+    background: var(--nb-accent);
+}
+
+.nb-chevron {
+    transition: transform 0.2s var(--nb-ease);
+}
+
+.is-open > .nb-link .nb-chevron,
+.is-open > .nb-acc-btn .nb-chevron,
+.nb-acc.is-open > .nb-acc-btn .nb-chevron {
+    transform: rotate(180deg);
+}
+
+/* ---------- Desktop menu (hidden on small screens) ---------- */
+
+.nb-desktop,
+.nb-actions {
+    display: none;
+}
+
+@media (min-width: 1200px) {
+    .nb-desktop {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        margin: 0 16px;
+    }
+
+    .nb-actions {
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .nb-burger,
+    .nb-mobile {
+        display: none;
+    }
+}
+
+/* ---------- Dropdown ---------- */
+
+.nb-dropdown {
+    position: relative;
+}
+
+.nb-drop-panel {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    min-width: 230px;
+    margin-top: 12px;
+    padding: 8px 0;
+    border: 1px solid var(--nb-border);
+    border-radius: 14px;
+    background: var(--nb-surface);
+    box-shadow: 0 20px 40px rgba(16, 20, 46, 0.14);
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, 8px);
+    transition:
+        opacity 0.15s var(--nb-ease),
+        transform 0.15s var(--nb-ease),
+        visibility 0s linear 0.15s;
+}
+
+/* invisible bridge so the pointer can travel from button to panel */
+.nb-drop-panel::before {
+    content: "";
+    position: absolute;
+    top: -14px;
+    left: 0;
+    right: 0;
+    height: 14px;
+}
+
+.nb-dropdown.is-open .nb-drop-panel {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+    transition-delay: 0s;
+}
+
+.nb-drop-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 16px;
+    color: #171717;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background-color 0.15s ease, padding-left 0.15s ease;
+}
+
+.nb-drop-item:hover {
+    padding-left: 20px;
+    background: var(--nb-surface-muted);
+}
+
+.nb-drop-sep {
+    margin: 4px 0;
+    border-top: 1px solid var(--nb-border);
+}
+
+.nb-drop-more {
+    display: block;
+    padding: 10px 16px;
+    color: var(--nb-primary);
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nb-drop-more:hover { color: var(--nb-accent); }
+
+/* ---------- Badge ---------- */
+
+.nb-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 9px;
+    border-radius: 999px;
+    background: var(--nb-accent);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+/* ---------- Buttons ---------- */
+
+.nb-btn-outline,
+.nb-btn-accent {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 9px 20px;
+    border-radius: 9999px;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.18s ease;
+}
+
+.nb-btn-outline {
+    border: 1.5px solid var(--nb-primary);
+    background: transparent;
+    color: var(--nb-primary);
+}
+
+.nb-btn-outline:hover {
+    background: var(--nb-primary);
+    color: #fff;
+}
+
+.nb-btn-accent {
+    border: 0;
+    background: var(--nb-accent);
+    color: #fff;
+    box-shadow: 0 6px 16px rgba(215, 25, 32, 0.25);
+}
+
+.nb-btn-accent:hover {
+    background: var(--nb-accent-hover);
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 10px 22px rgba(215, 25, 32, 0.32);
+}
+
+.nb-full { width: 100%; }
+
+.nb-user {
+    color: var(--nb-primary);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* ---------- Hamburger ---------- */
+
+.nb-burger {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 8px;
+    background: none;
+    color: var(--nb-primary);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.nb-burger:hover { background: var(--nb-surface-muted); }
+
+.nb-burger .nb-ico-close,
+.nb-burger.is-open .nb-ico-menu { display: none; }
+.nb-burger.is-open .nb-ico-close { display: block; }
+
+/* ---------- Mobile menu ---------- */
+
+.nb-mobile {
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    border-top: 1px solid transparent;
+    background: var(--nb-surface);
+    transition:
+        max-height 0.3s var(--nb-ease),
+        visibility 0s linear 0.3s;
+}
+
+.nb-mobile.is-open {
+    max-height: calc(100vh - var(--nb-height));
+    overflow-y: auto;
+    visibility: visible;
+    border-top-color: var(--nb-border);
+    transition: max-height 0.3s var(--nb-ease), visibility 0s;
+}
+
+.nb-mobile-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 24px 24px;
+}
+
+.nb-m-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px;
+    border: 0;
+    border-radius: 6px;
+    background: none;
+    color: var(--nb-primary);
+    font: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nb-m-link.is-active,
+.nb-acc.is-open > .nb-m-link {
+    color: var(--nb-accent);
+}
+
+.nb-m-link.is-active {
+    background: var(--nb-accent-light);
+}
+
+.nb-acc-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    max-height: 0;
+    overflow: hidden;
+    padding-left: 12px;
+    transition: max-height 0.3s var(--nb-ease);
+}
+
+.nb-acc.is-open .nb-acc-panel {
+    max-height: 400px;
+}
+
+.nb-m-sub {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 12px;
+    border-radius: 6px;
+    color: var(--nb-muted);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.nb-m-sub:hover { background: var(--nb-surface-muted); }
+
+.nb-m-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+/* ---------- Social icons ---------- */
+
+.nb-social {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--nb-border);
+}
+
+.nb-social a {
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--nb-surface-muted);
+    color: var(--nb-primary);
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.nb-social a:hover {
+    background: var(--nb-accent);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* ---------- Focus + reduced motion ---------- */
+
+.nb-header a:focus-visible,
+.nb-header button:focus-visible {
+    outline: 2px solid var(--nb-accent);
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .nb-header *,
+    .nb-header *::before {
+        transition-duration: 0.01ms !important;
+    }
+}
